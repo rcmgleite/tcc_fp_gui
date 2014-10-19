@@ -13,12 +13,12 @@ int main(int argc, char *argv[])
     *   Instância a classe test para que possamos depois colocá-la no QML
     */
 
-    Core test;
+    Core core;
 
     /*
     *   Adiciona o objeto test no contexto do QML
     */
-    view.rootContext()->setContextProperty("test", &test);
+    view.rootContext()->setContextProperty("core", &core);
     view.setSource(QUrl::fromLocalFile("qml/gui_tcc/main.qml"));
     view.show();
 

@@ -16,3 +16,22 @@ void Core::execute(void){
         this->main.execute();
 }
 
+float Core::getWindowingTime(void){
+    return this->main.getVInterfaceDTO().getWindowingTime();
+}
+float Core::getEqualizationTime(void){
+    return this->main.getVInterfaceDTO().getEqualizationTime();
+}
+float Core::getGaborFilterTime(void){
+    return this->main.getVInterfaceDTO().getGaborFilterTime();
+}
+float Core::getBinarizationTime(void){
+    return this->main.getVInterfaceDTO().getBinarizationTime();
+}
+float Core::getMinutiaeExtractionTime(void){
+    return this->main.getVInterfaceDTO().getMinutiaeExtractionTime();
+}
+float Core::getMatchingTime(void){
+    return this->main.getVInterfaceDTO().getMatchingTime();
+}
+

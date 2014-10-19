@@ -27,6 +27,13 @@ public:
     Q_INVOKABLE QString getName();
     Q_INVOKABLE void setName(QString);
     Q_INVOKABLE void execute(void);
+
+    Q_INVOKABLE float getWindowingTime(void);
+    Q_INVOKABLE float getEqualizationTime(void);
+    Q_INVOKABLE float getGaborFilterTime(void);
+    Q_INVOKABLE float getBinarizationTime(void);
+    Q_INVOKABLE float getMinutiaeExtractionTime(void);
+    Q_INVOKABLE float getMatchingTime(void);
 };
 
 #endif // TEST_HPP

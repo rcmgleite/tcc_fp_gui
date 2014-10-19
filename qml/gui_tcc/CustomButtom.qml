@@ -13,13 +13,14 @@ Rectangle {
     /*
     *  PROPERTIES
     */
-    property string buttonColor: "green"
+    property string defaultButtonColor: "lightgreen"
+    property string pressedButtonColor: "green"
     property string buttonLabelColor: "black"
     property string buttonLabel: "Click me!"
 
-    color: buttonColor
+    color: defaultButtonColor
     Rectangle{
-    opacity: 0.7
+    color: "transparent"
     anchors.fill: parent
 
         Text{
@@ -35,8 +36,11 @@ Rectangle {
             anchors.fill: parent
             enabled: true
             onPressed: {
+                button.color = pressedButtonColor
                 buttonClick();
             }
+            onReleased:
+                button.color = defaultButtonColor
         }
     }
 }
