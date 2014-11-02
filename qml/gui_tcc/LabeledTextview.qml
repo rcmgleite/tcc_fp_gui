@@ -1,6 +1,7 @@
 import QtQuick 1.1
 
 Rectangle {
+    id: root
     property string label: "myLabel"
     property string value: "myValue"
     width: 100

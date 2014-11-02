@@ -4,6 +4,7 @@ Rectangle {
     id:button
     width: 100
     height: 40
+    radius: 10
 
     /*
     *  SIGNALS
@@ -13,8 +14,8 @@ Rectangle {
     /*
     *  PROPERTIES
     */
-    property string defaultButtonColor: "lightgreen"
-    property string pressedButtonColor: "green"
+    property string defaultButtonColor: "#a0cac0"
+    property string pressedButtonColor: "#68a697"
     property string buttonLabelColor: "black"
     property string buttonLabel: "Click me!"
 
