@@ -118,7 +118,7 @@ Rectangle {
         buttonLabelColor: "black"
         onButtonClick: {
             console.log("executando core agora!");
-            //core.execute();
+            core.execute();
         }
     }
 
@@ -214,4 +214,12 @@ Rectangle {
             console.log("Enviando feedback")
         }
     }
+
+    Connections {
+        target: core
+        onExecutionComplete: {
+            console.log("onExecutionComplete called")
+        }
+    }
+
 }
