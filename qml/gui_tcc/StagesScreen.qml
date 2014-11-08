@@ -6,9 +6,6 @@ Rectangle {
     height: 400
     color: "transparent"
 
-    //SIGNALS
-    signal metricsButtonClicked
-
     Text {
         id: stageName
         anchors.top: parent.top
@@ -224,7 +221,7 @@ Rectangle {
         buttonLabelColor: "black"
         onButtonClick: {
             console.log(">metricsButton called");
-            metricsButtonClicked()
+            core.metricsScreenRequest();
         }
     }
 

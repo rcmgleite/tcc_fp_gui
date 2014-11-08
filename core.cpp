@@ -24,6 +24,14 @@ void Core::execute(int mode){
         this->main.execute(_mode, this);
 }
 
+void Core::metricsScreenRequest(){
+    emit signalMetricsScreenRequest();
+}
+
+void Core::initalScreenRequest(){
+    emit signalInitialScreenRequest();
+}
+
 float Core::getWindowingTime(void){
     return this->main.getVInterfaceDTO().getWindowingTime();
 }

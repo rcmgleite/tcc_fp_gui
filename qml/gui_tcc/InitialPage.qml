@@ -23,9 +23,6 @@ Rectangle{
         id: stagesScreen
         signal metricsPageRequested
         anchors.top: separetor.bottom
-        onMetricsButtonClicked: {
-            //TODO
-        }
     }
 
 

@@ -12,9 +12,13 @@ Rectangle{
     }
 
     Connections {
-        target: StagesScreen
-        onMetricsButtonClicked: {
+        target: core
+        onSignalMetricsScreenRequest: {
             pageLoader.source = "MetricsScreen.qml"
+        }
+
+        onSignalInitialScreenRequest:{
+            pageLoader.source = "InitialPage.qml"
         }
     }
 }

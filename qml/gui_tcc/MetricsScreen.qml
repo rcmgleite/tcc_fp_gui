@@ -5,8 +5,16 @@ Rectangle{
     height: 700
     color: "#eeeeee"
 
-    Text {
-        id: name
-        text: qsTr("text")
+    CustomButtom{
+        id: backButton
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 20
+        anchors.right: parent.right
+        anchors.rightMargin: 30
+        buttonLabel: "Voltar"
+        buttonLabelColor: "black"
+        onButtonClick: {
+            core.initalScreenRequest();
+        }
     }
 }
