@@ -25,7 +25,7 @@ public:
     /*
     *   Todo o método C++ que vai ser chamado no QML tem q ser Q_INVOKABLE
     */
-    Q_INVOKABLE void execute(void);
+    Q_INVOKABLE void execute(int mode);
 
     Q_INVOKABLE float getWindowingTime(void);
     Q_INVOKABLE float getEqualizationTime(void);

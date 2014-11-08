@@ -118,7 +118,12 @@ Rectangle {
         buttonLabelColor: "black"
         onButtonClick: {
             console.log("executando core agora!");
-            core.execute();
+            if (chkboxModeDefault.checked)
+                core.execute(0);
+            else if (chkboxModeRigid.checked)
+                core.execute(1);
+            else if (chkboxModeTolerant.checked)
+                core.execute(2);
         }
     }
 
@@ -158,6 +163,7 @@ Rectangle {
         radius: 5
         color: "#32CD32"
         Text {
+            id: textResultValue
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             text: qsTr("Aceito")
@@ -219,7 +225,16 @@ Rectangle {
         target: core
         onExecutionComplete: {
             console.log("onExecutionComplete called")
+            textResultValue.text = "Aceito"
+            textResultsResult.color = "#32CD32"
         }
+    }
+
+    Component.onCompleted: {
+        chkboxModeDefault.checked = true;
+        chkboxResultFalse.checked = true;
+        textResultValue.text = "Não executado"
+        textResultsResult.color = "yellow"
     }
 
 }

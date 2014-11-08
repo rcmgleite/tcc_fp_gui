@@ -3,9 +3,25 @@
 
 using namespace std;
 
-void Core::execute(void){
+void Core::execute(int mode){
         cout << "Chamou execute() usando o QT" << endl;
-        this->main.execute(this);
+        SystemMode _mode;
+
+        switch (mode){
+            case SystemMode::DEFAULT:
+                _mode = SystemMode::DEFAULT;
+                break;
+
+            case SystemMode::RIGID:
+                _mode = SystemMode::RIGID;
+                break;
+
+            case SystemMode::TOLERANT:
+                _mode = SystemMode::TOLERANT;
+                break;
+        }
+        cout << "> Selected mode: " << _mode << endl;
+        this->main.execute(_mode, this);
 }
 
 float Core::getWindowingTime(void){

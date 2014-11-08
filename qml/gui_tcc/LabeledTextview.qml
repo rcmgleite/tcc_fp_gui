@@ -6,6 +6,7 @@ Rectangle {
     property string value: "myValue"
     width: 100
     height: 50
+    color: "transparent"
 
     Text {
         id: textViewLabel
