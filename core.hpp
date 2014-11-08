@@ -33,6 +33,7 @@ public:
     Q_INVOKABLE float getBinarizationTime(void);
     Q_INVOKABLE float getMinutiaeExtractionTime(void);
     Q_INVOKABLE float getMatchingTime(void);
+    Q_INVOKABLE bool getAccepted(void);
 
 signals:
     void executionComplete();

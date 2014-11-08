@@ -18,6 +18,7 @@ Rectangle {
     property string pressedButtonColor: "#68a697"
     property string buttonLabelColor: "black"
     property string buttonLabel: "Click me!"
+    property string fontSize : "12"
 
     color: defaultButtonColor
     Rectangle{
@@ -30,6 +31,7 @@ Rectangle {
             anchors.verticalCenter: parent.verticalCenter
             color: buttonLabelColor
             text: buttonLabel
+            font.pointSize: fontSize
         }
 
         MouseArea {

@@ -1,6 +1,7 @@
 import QtQuick 1.1
 
 Rectangle {
+    id: upperMainScreen
     width: parent.width
     height: 300
     color: "transparent"
@@ -217,6 +218,7 @@ Rectangle {
         buttonLabel: "Enviar"
         buttonLabelColor: "black"
         onButtonClick: {
+            //TODO
             console.log("Enviando feedback")
         }
     }
@@ -224,9 +226,15 @@ Rectangle {
     Connections {
         target: core
         onExecutionComplete: {
-            console.log("onExecutionComplete called")
-            textResultValue.text = "Aceito"
-            textResultsResult.color = "#32CD32"
+            var accepted = core.getAccepted();
+            if (accepted === true){
+                textResultValue.text = "Aceito"
+                textResultsResult.color = "#32CD32"
+            }
+            else{
+                textResultValue.text = "Recusado"
+                textResultsResult.color = "red"
+            }
         }
     }
 
