@@ -16,7 +16,7 @@ Rectangle{
         anchors.horizontalCenter: parent.horizontalCenter
         width: 1100
         height: 1
-        source: "../../../gui_tcc/resources/images/list_separator.png"
+        source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
     }
 
     StagesScreen{
