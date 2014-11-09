@@ -26,6 +26,8 @@ public:
     *   Todo o método C++ que vai ser chamado no QML tem q ser Q_INVOKABLE
     */
     Q_INVOKABLE void execute(int mode);
+    Q_INVOKABLE void metricsScreenRequest();
+    Q_INVOKABLE void initalScreenRequest();
 
     Q_INVOKABLE float getWindowingTime(void);
     Q_INVOKABLE float getEqualizationTime(void);
@@ -33,10 +35,12 @@ public:
     Q_INVOKABLE float getBinarizationTime(void);
     Q_INVOKABLE float getMinutiaeExtractionTime(void);
     Q_INVOKABLE float getMatchingTime(void);
+    Q_INVOKABLE bool getAccepted(void);
 
 signals:
     void executionComplete();
-
+    void signalMetricsScreenRequest();
+    void signalInitialScreenRequest();
 };
 
 #endif // TEST_HPP

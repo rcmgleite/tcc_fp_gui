@@ -1,6 +1,7 @@
 import QtQuick 1.1
 
 Rectangle {
+    id: stagesScreen
     width: parent.width
     height: 400
     color: "transparent"
@@ -12,7 +13,7 @@ Rectangle {
         anchors.horizontalCenter: parent.horizontalCenter
         font.family: "OpenSans"
         font.pointSize: 20
-        text: "Etapa de Extração de Minúcias"
+        text: "Etapa: "
     }
 
     //NO PRE-PROCESSING - NO ADAPT
@@ -54,7 +55,7 @@ Rectangle {
             anchors.left: parent.left
             anchors.leftMargin: 50
             label: "Tempo(s): "
-            value: "5"
+            value: ""
         }
 
     }
@@ -62,7 +63,7 @@ Rectangle {
     Image {
         id: separetor1
         anchors.top: parent.top
-        anchors.topMargin: 60
+        anchors.topMargin: 30
         anchors.left: noPreNoAdaptContainer.right
         anchors.leftMargin: 50
         width: 1
@@ -105,14 +106,14 @@ Rectangle {
             anchors.left: parent.left
             anchors.leftMargin: 50
             label: "Tempo(s): "
-            value: "5"
+            value: ""
         }
     }
 
     Image {
         id: separetor2
         anchors.top: parent.top
-        anchors.topMargin: 60
+        anchors.topMargin: 30
         anchors.left: withPreNoAdaptContainer.right
         anchors.leftMargin: 50
         width: 1
@@ -156,20 +157,211 @@ Rectangle {
             anchors.left: parent.left
             anchors.leftMargin: 50
             label: "Tempo(s): "
-            value: "5"
+            value: ""
         }
     }
 
-    //lastItem
+    //bottom buttons
     CustomButtom{
         id: nextStageButton
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 20
         anchors.horizontalCenter: parent.horizontalCenter
+        width: 120
         buttonLabel: "Próxima Etapa"
         buttonLabelColor: "black"
         onButtonClick: {
-            console.log("Próxima etapa clicado")
+            if (stagesScreen.state === "default")
+                stagesScreen.state = "windowing"
+            else if (stagesScreen.state === "windowing")
+                stagesScreen.state = "equalization"
+            else if (stagesScreen.state === "equalization")
+                stagesScreen.state = "gabor"
+            else if (stagesScreen.state === "gabor")
+                stagesScreen.state = "binarization"
+            else if (stagesScreen.state === "binarization")
+                stagesScreen.state = "minutiaExtraction"
+            else if (stagesScreen.state === "minutiaExtraction")
+                stagesScreen.state = "matching"
+        }
+    }
+
+    CustomButtom{
+        id: previousStageButton
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 20
+        anchors.right: nextStageButton.left
+        anchors.rightMargin: 5
+        width: 120
+        buttonLabel: "Etapa Anterior"
+        buttonLabelColor: "black"
+        onButtonClick: {
+            if (stagesScreen.state === "matching")
+                stagesScreen.state = "minutiaExtraction"
+            else if (stagesScreen.state === "minutiaExtraction")
+                stagesScreen.state = "binarization"
+            else if (stagesScreen.state === "binarization")
+                stagesScreen.state = "gabor"
+            else if (stagesScreen.state === "gabor")
+                stagesScreen.state = "equalization"
+            else if (stagesScreen.state === "equalization")
+                stagesScreen.state = "windowing"
+            else if (stagesScreen.state === "windowing")
+                stagesScreen.state = "default"
+        }
+    }
+
+    CustomButtom{
+        id: metricsButton
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 20
+        anchors.right: parent.right
+        anchors.rightMargin: 30
+        buttonLabel: "Métricas"
+        buttonLabelColor: "black"
+        onButtonClick: {
+            console.log(">metricsButton called");
+            core.metricsScreenRequest();
+        }
+    }
+
+    //STATES
+    states: [
+        State{
+            name: "default"
+
+            PropertyChanges {
+                target: stageName
+                text: "Etapa: Não executado"
+            }
+            PropertyChanges {
+                target: previousStageButton
+                visible: false
+            }
+
+            PropertyChanges {
+                target: nextStageButton
+                visible: false
+            }
+        },
+
+        State{
+            name: "windowing"
+            PropertyChanges {
+                target: stageName
+                text: "Etapa: Janelamento"
+            }
+
+            PropertyChanges {
+                target: nextStageButton
+                visible: true
+            }
+
+            PropertyChanges {
+                target: previousStageButton
+                visible: false
+            }
+
+            PropertyChanges {
+                target: textWithPreNoAdaptExecTime
+                value: core.getWindowingTime()
+            }
+
+        },
+
+        State{
+            name: "equalization"
+            PropertyChanges {
+                target: stageName
+                text: "Etapa: Normalização"
+            }
+
+            PropertyChanges {
+                target: previousStageButton
+                visible: true
+            }
+
+            PropertyChanges {
+                target: textWithPreNoAdaptExecTime
+                value: core.getEqualizationTime()
+            }
+        },
+
+        State{
+            name: "gabor"
+            PropertyChanges {
+                target: stageName
+                text: "Etapa: Filtro de gabor"
+            }
+
+            PropertyChanges {
+                target: textWithPreNoAdaptExecTime
+                value: core.getGaborFilterTime()
+
+            }
+        },
+
+        State{
+            name: "binarization"
+            PropertyChanges {
+                target: stageName
+                text: "Etapa: Binarização"
+            }
+
+            PropertyChanges {
+                target: textWithPreNoAdaptExecTime
+                value: core.getBinarizationTime()
+
+            }
+        },
+
+        State{
+            name: "minutiaExtraction"
+            PropertyChanges {
+                target: stageName
+                text: "Etapa: Extração de minúcias"
+            }
+
+            PropertyChanges {
+                target: nextStageButton
+                visible: true
+            }
+
+            PropertyChanges {
+                target: textWithPreNoAdaptExecTime
+                value: core.getMinutiaeExtractionTime()
+
+            }
+        },
+
+        State{
+            name: "matching"
+            PropertyChanges {
+                target: stageName
+                text: "Etapa: Matching"
+            }
+
+            PropertyChanges {
+                target: nextStageButton
+                visible: false
+            }
+
+            PropertyChanges {
+                target: textWithPreNoAdaptExecTime
+                value: core.getMatchingTime()
+            }
+        }
+    ]
+
+    Component.onCompleted: {
+        stagesScreen.state = "default"
+    }
+
+
+    Connections {
+        target: core
+        onExecutionComplete: {
+            stagesScreen.state = "windowing"
         }
     }
 }

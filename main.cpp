@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     Core core;
 
     /*
-    *   Adiciona o objeto test no contexto do QML
+    *   Adiciona o objeto Core no contexto do QML
     */
     view.rootContext()->setContextProperty("core", &core);
     view.setSource(QUrl::fromLocalFile("qml/gui_tcc/main.qml"));

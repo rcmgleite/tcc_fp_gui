@@ -5,23 +5,20 @@ Rectangle{
     height: 700
     color: "#eeeeee"
 
-    UpperMainScreen{
-        id:upperMainScreen
+    Loader {
+        id: pageLoader
+        source: "InitialPage.qml"
+        focus: true
     }
 
-    Image {
-        id: separetor
-        anchors.top: upperMainScreen.bottom
-        anchors.topMargin: 5
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: 1100
-        height: 1
-        source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
-    }
+    Connections {
+        target: core
+        onSignalMetricsScreenRequest: {
+            pageLoader.source = "MetricsScreen.qml"
+        }
 
-    StagesScreen{
-        id: stagesScreen
-        anchors.top: separetor.bottom
+        onSignalInitialScreenRequest:{
+            pageLoader.source = "InitialPage.qml"
+        }
     }
-
 }

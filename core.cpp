@@ -24,6 +24,14 @@ void Core::execute(int mode){
         this->main.execute(_mode, this);
 }
 
+void Core::metricsScreenRequest(){
+    emit signalMetricsScreenRequest();
+}
+
+void Core::initalScreenRequest(){
+    emit signalInitialScreenRequest();
+}
+
 float Core::getWindowingTime(void){
     return this->main.getVInterfaceDTO().getWindowingTime();
 }
@@ -42,8 +50,10 @@ float Core::getMinutiaeExtractionTime(void){
 float Core::getMatchingTime(void){
     return this->main.getVInterfaceDTO().getMatchingTime();
 }
+bool Core::getAccepted(void){
+    return this->main.getVInterfaceDTO().getAccepted();
+}
+
 void Core::callback(void){
-    //TODO - chamar o método fetch data para colocar os dados no qml
-    cout << "A C A B O U" << endl;
     emit executionComplete();
 }
