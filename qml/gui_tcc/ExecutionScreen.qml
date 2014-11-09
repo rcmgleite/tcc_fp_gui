@@ -2,20 +2,20 @@ import QtQuick 1.1
 
 Rectangle {
     id: upperMainScreen
-    width: parent.width
-    height: 300
+    width: 980
+    height: 660
     color: "transparent"
 
     Text {
         id: inputImagePathLabel
         anchors.left: parent.left
-        anchors.leftMargin: 50
+        anchors.leftMargin: 20
         anchors.top: parent.top
         anchors.topMargin: 20
-        width: 300
+        width: parent.width
         font.family: "OpenSans"
-        font.pointSize: 20
-        text: "Imagem de entrada:"
+        font.pointSize: 18
+        text: "1) Escolha para a imagem de entrada:"
 
     }
 
@@ -23,14 +23,16 @@ Rectangle {
         id: inputImagePath
         x: inputImagePathLabel.x
         anchors.top: inputImagePathLabel.bottom
-        anchors.topMargin: 20
+        anchors.topMargin: 10
+        anchors.left: parent.left
+        anchors.leftMargin: 30
         font.family: "OpenSans"
         font.pointSize: 12
-        width: 300
+        width: parent.width
         wrapMode: TextEdit.Wrap
         color: "black"
         focus: true
-        text: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/no_image.png"
+        text: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/no_image.png"
     }
 
     Image {
@@ -38,40 +40,30 @@ Rectangle {
         x: inputImagePath.x
         anchors.top: inputImagePath.bottom
         anchors.topMargin: 20
-        width: 150
-        height: 150
+        width: 100
+        height: 100
         source: inputImagePath.text
         cache: false
     }
 
-    Image {
-        id: separetor1
-        anchors.top: parent.top
-        anchors.topMargin: 30
-        anchors.left: inputImagePathLabel.right
-        anchors.leftMargin: 50
-        width: 1
-        height: 250
-        source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
-    }
-
-    //2th item on grid
+    //2th
     Text {
-        id: systemMode
-        anchors.left: inputImagePathLabel.right
-        anchors.leftMargin: 100
-        anchors.top: parent.top
+        id: systemModeLabel
+        anchors.left: parent.left
+        anchors.leftMargin: 20
+        anchors.top: inputImage.bottom
         anchors.topMargin: 20
-        width: 300
+        width: parent.width
         font.family: "OpenSans"
-        font.pointSize: 20
-        text: "Modo do Sistema"
+        font.pointSize: 18
+        text: "2) Escolha do modo do sistema:"
     }
 
     Checkbox {
         id:chkboxModeDefault
-        x: systemMode.x
-        anchors.top: systemMode.bottom
+        anchors.left: parent.left
+        anchors.leftMargin: 40
+        anchors.top: systemModeLabel.bottom
         anchors.topMargin: 10
         label: "Padrão"
         onCkClicked: {
@@ -84,8 +76,9 @@ Rectangle {
 
     Checkbox {
         id:chkboxModeRigid
-        x: systemMode.x
-        anchors.top: chkboxModeDefault.bottom
+        anchors.left: chkboxModeDefault.right
+        anchors.leftMargin: 40
+        anchors.top: systemModeLabel.bottom
         anchors.topMargin: 10
         label: "Rigoroso"
         onCkClicked: {
@@ -98,8 +91,9 @@ Rectangle {
 
     Checkbox {
         id:chkboxModeTolerant
-        x: systemMode.x
-        anchors.top: chkboxModeRigid.bottom
+        anchors.left: chkboxModeRigid.right
+        anchors.leftMargin: 40
+        anchors.top: systemModeLabel.bottom
         anchors.topMargin: 10
         label: "Tolerante"
         onCkClicked: {
@@ -110,77 +104,62 @@ Rectangle {
         }
     }
 
-    CustomButtom{
-        id: executeButton
-        x: systemMode.x
-        anchors.top: chkboxModeTolerant.bottom
-        anchors.topMargin: 10
-        buttonLabel: "Executar"
-        buttonLabelColor: "black"
-        onButtonClick: {
-            console.log("executando core agora!");
-            if (chkboxModeDefault.checked)
-                core.execute(0);
-            else if (chkboxModeRigid.checked)
-                core.execute(1);
-            else if (chkboxModeTolerant.checked)
-                core.execute(2);
-        }
-    }
-
-    Image {
-        id: separetor2
-        anchors.top: parent.top
-        anchors.topMargin: 30
-        anchors.left: systemMode.right
-        anchors.leftMargin: 50
-        width: 1
-        height: 250
-        source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
-    }
-
-    //3th item on gird
+    //3th
     Text {
-        id: textResults
-        anchors.left: systemMode.right
-        anchors.leftMargin: 100
-        anchors.top: parent.top
+        id: executionAndResultsLabel
+        anchors.left: parent.left
+        anchors.leftMargin: 20
+        anchors.top: chkboxModeTolerant.bottom
         anchors.topMargin: 20
         width: 300
         font.family: "OpenSans"
-        font.pointSize: 20
-        text: "Resultado:"
+        font.pointSize: 18
+        text: "3) Execuçao e resultados:"
+    }
+
+    Text {
+        id: textResults
+        anchors.left: parent.left
+        anchors.leftMargin: 30
+        anchors.top: executionAndResultsLabel.bottom
+        anchors.topMargin: 20
+        width: 100
+        font.family: "OpenSans"
+        font.pointSize: 14
+        text: "i) Resultado:"
     }
 
     Rectangle{
         id: textResultsResult
-        x: textResults.x
-        width: 100
-        height: 20
+        anchors.left: parent.left
+        anchors.leftMargin: 30
         anchors.top: textResults.bottom
-        anchors.topMargin: 20
+        anchors.topMargin: 10
+        width: 120
+        height: 30
         border.color: "black"
         border.width: 2
         radius: 5
-        color: "#32CD32"
+        color: "yellow"
         Text {
             id: textResultValue
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
-            text: qsTr("Aceito")
+            text: qsTr("Não executado")
         }
     }
 
     Text {
         id: textFeedbackLabel
-        x: textResults.x
+        anchors.left: parent.left
+        anchors.leftMargin: 30
         width: 100
         height: 20
         anchors.top: textResultsResult.bottom
         anchors.topMargin: 20
-        font.pixelSize: 20
+        font.pointSize: 14
         font.family: "OpenSans"
-        text: qsTr("Feedback:")
+        text: "ii)Feedback:"
     }
 
 
@@ -199,8 +178,9 @@ Rectangle {
 
     Checkbox {
         id:chkboxResultTrue
-        x: textResults.x
-        anchors.top: chkboxResultFalse.bottom
+        anchors.left: chkboxResultFalse.right
+        anchors.leftMargin: 20
+        anchors.top: textFeedbackLabel.bottom
         anchors.topMargin: 10
         label: "Resultado verdadeiro"
         onCkClicked: {
@@ -215,11 +195,33 @@ Rectangle {
         x: textResults.x
         anchors.top: chkboxResultTrue.bottom
         anchors.topMargin: 10
-        buttonLabel: "Enviar"
+        width: 150
+        buttonLabel: "Enviar feedback"
         buttonLabelColor: "black"
         onButtonClick: {
             //TODO
             console.log("Enviando feedback")
+        }
+    }
+
+    CustomButtom{
+        id: executeButton
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 20
+        width: 300
+        fontSize: "18"
+        height: 50
+        buttonLabel: "Executar"
+        buttonLabelColor: "black"
+        onButtonClick: {
+            console.log("executando core agora!");
+            if (chkboxModeDefault.checked)
+                core.execute(0);
+            else if (chkboxModeRigid.checked)
+                core.execute(1);
+            else if (chkboxModeTolerant.checked)
+                core.execute(2);
         }
     }
 
@@ -241,8 +243,6 @@ Rectangle {
     Component.onCompleted: {
         chkboxModeDefault.checked = true;
         chkboxResultFalse.checked = true;
-        textResultValue.text = "Não executado"
-        textResultsResult.color = "yellow"
     }
 
 }

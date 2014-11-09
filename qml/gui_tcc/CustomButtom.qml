@@ -14,8 +14,8 @@ Rectangle {
     /*
     *  PROPERTIES
     */
-    property string defaultButtonColor: "#a0cac0"
-    property string pressedButtonColor: "#68a697"
+    property string defaultButtonColor: "#8b9dc3"
+    property string pressedButtonColor: "#3b5998"
     property string buttonLabelColor: "black"
     property string buttonLabel: "Click me!"
     property string fontSize : "12"

@@ -28,6 +28,7 @@ public:
     Q_INVOKABLE void execute(int mode);
     Q_INVOKABLE void metricsScreenRequest();
     Q_INVOKABLE void initalScreenRequest();
+    Q_INVOKABLE void stagesScreenRequest();
 
     Q_INVOKABLE float getWindowingTime(void);
     Q_INVOKABLE float getEqualizationTime(void);
@@ -41,6 +42,7 @@ signals:
     void executionComplete();
     void signalMetricsScreenRequest();
     void signalInitialScreenRequest();
+    void signalStagesScreenRequest();
 };
 
 #endif // TEST_HPP

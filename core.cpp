@@ -32,6 +32,10 @@ void Core::initalScreenRequest(){
     emit signalInitialScreenRequest();
 }
 
+void Core::stagesScreenRequest(){
+    emit signalStagesScreenRequest();
+}
+
 float Core::getWindowingTime(void){
     return this->main.getVInterfaceDTO().getWindowingTime();
 }

@@ -43,7 +43,7 @@ Rectangle {
             anchors.topMargin: 10
             width: 150
             height: 150
-            source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/no_image.png"
+            source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/no_image.png"
             cache: false
         }
 
@@ -68,7 +68,7 @@ Rectangle {
         anchors.leftMargin: 50
         width: 1
         height: 250
-        source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
+        source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_vertical_limit.png"
     }
 
     Rectangle{
@@ -95,7 +95,7 @@ Rectangle {
             anchors.topMargin: 10
             width: 150
             height: 150
-            source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/no_image.png"
+            source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/no_image.png"
             cache: false
         }
 
@@ -118,7 +118,7 @@ Rectangle {
         anchors.leftMargin: 50
         width: 1
         height: 250
-        source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
+        source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_vertical_limit.png"
     }
 
     Rectangle{
@@ -146,7 +146,7 @@ Rectangle {
             anchors.topMargin: 10
             width: 150
             height: 150
-            source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/no_image.png"
+            source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/no_image.png"
             cache: false
         }
 

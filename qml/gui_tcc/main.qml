@@ -20,5 +20,9 @@ Rectangle{
         onSignalInitialScreenRequest:{
             pageLoader.source = "InitialPage.qml"
         }
+
+        onSignalStagesScreenRequest: {
+            pageLoader.source = "StagesScreen.qml"
+        }
     }
 }
