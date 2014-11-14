@@ -30,7 +30,7 @@ Rectangle {
         wrapMode: TextEdit.Wrap
         color: "black"
         focus: true
-        text: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/no_image.png"
+        text: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif"
     }
 
     Image {
@@ -52,7 +52,7 @@ Rectangle {
         anchors.leftMargin: 50
         width: 1
         height: 250
-        source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
+        source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
     }
 
     //2th item on grid
@@ -136,7 +136,7 @@ Rectangle {
         anchors.leftMargin: 50
         width: 1
         height: 250
-        source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
+        source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
     }
 
     //3th item on gird
