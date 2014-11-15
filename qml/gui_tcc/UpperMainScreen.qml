@@ -219,6 +219,23 @@ Rectangle {
         buttonLabelColor: "black"
         onButtonClick: {
             //TODO
+            if (chkboxResultTrue.checked) {
+                if (core.getAccepted()) {
+                    core.trueAcceptance();
+                }
+                else {
+                    core.trueRejection();
+                }
+            }
+            else {
+                if (core.getAccepted()) {
+                    core.falseAcceptance();
+                }
+                else {
+                    core.falseRejection();
+                }
+            }
+
             console.log("Enviando feedback")
         }
     }

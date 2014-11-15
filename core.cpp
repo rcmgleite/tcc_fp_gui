@@ -24,6 +24,22 @@ void Core::execute(int mode){
         this->main.execute(_mode, this);
 }
 
+void Core::trueAcceptance(){
+    this->main.getVInterfaceDTO().setFeedback31(0);
+}
+
+void Core::trueRejection(){
+    this->main.getVInterfaceDTO().setFeedback31(1);
+}
+
+void Core::falseAcceptance(){
+    this->main.getVInterfaceDTO().setFeedback31(2);
+}
+
+void Core::falseRejection(){
+    this->main.getVInterfaceDTO().setFeedback31(3);
+}
+
 void Core::metricsScreenRequest(){
     emit signalMetricsScreenRequest();
 }

@@ -36,6 +36,10 @@ public:
     Q_INVOKABLE float getMinutiaeExtractionTime(void);
     Q_INVOKABLE float getMatchingTime(void);
     Q_INVOKABLE bool getAccepted(void);
+    Q_INVOKABLE void trueAcceptance();
+    Q_INVOKABLE void trueRejection();
+    Q_INVOKABLE void falseAcceptance();
+    Q_INVOKABLE void falseRejection();
 
 signals:
     void executionComplete();
