@@ -153,7 +153,7 @@ Rectangle {
     }
 
     Rectangle{
-        id: textResultsResult
+        id: textResultsResult1
         x: textResults.x
         width: 100
         height: 20
@@ -164,7 +164,26 @@ Rectangle {
         radius: 5
         color: "#32CD32"
         Text {
-            id: textResultValue
+            id: textResultValue1
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
+            text: qsTr("Aceito")
+        }
+    }
+
+    Rectangle{
+        id: textResultsResult2
+        x: textResults.x
+        width: 100
+        height: 20
+        anchors.top: textResults.bottom
+        anchors.topMargin: 20
+        border.color: "black"
+        border.width: 2
+        radius: 5
+        color: "#32CD32"
+        Text {
+            id: textResult2Value
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             text: qsTr("Aceito")
@@ -176,7 +195,7 @@ Rectangle {
         x: textResults.x
         width: 100
         height: 20
-        anchors.top: textResultsResult.bottom
+        anchors.top: textResultsResult1.bottom
         anchors.topMargin: 20
         font.pixelSize: 20
         font.family: "OpenSans"
@@ -189,7 +208,7 @@ Rectangle {
         x: textResults.x
         anchors.top: textFeedbackLabel.bottom
         anchors.topMargin: 10
-        label: "Resultado falso"
+        label: "Usuario NAO cadastrado"
         onCkClicked: {
             if (checked){
                 chkboxResultTrue.checked = false
@@ -202,7 +221,7 @@ Rectangle {
         x: textResults.x
         anchors.top: chkboxResultFalse.bottom
         anchors.topMargin: 10
-        label: "Resultado verdadeiro"
+        label: "Usuario cadastrado"
         onCkClicked: {
             if (checked){
                chkboxResultFalse.checked = false
@@ -218,22 +237,11 @@ Rectangle {
         buttonLabel: "Enviar"
         buttonLabelColor: "black"
         onButtonClick: {
-            //TODO
             if (chkboxResultTrue.checked) {
-                if (core.getAccepted()) {
-                    core.trueAcceptance();
-                }
-                else {
-                    core.trueRejection();
-                }
+                core.setFeedback(true);
             }
             else {
-                if (core.getAccepted()) {
-                    core.falseAcceptance();
-                }
-                else {
-                    core.falseRejection();
-                }
+                core.setFeedback(false);
             }
 
             console.log("Enviando feedback")
@@ -243,14 +251,18 @@ Rectangle {
     Connections {
         target: core
         onExecutionComplete: {
-            var accepted = core.getAccepted();
-            if (accepted === true){
-                textResultValue.text = "Aceito"
-                textResultsResult.color = "#32CD32"
+            var accepted1 = core.getAccepted1();
+            var accepted2 = core.getAccepted2();
+            var accepted31 = core.getAccepted31();
+            var accepted32 = core.getAccepted32();
+            var accepted33 = core.getAccepted33();
+            if (accepted1 === true){
+                textResultValue1.text = "Aceito"
+                textResultsResult1.color = "#32CD32"
             }
             else{
-                textResultValue.text = "Recusado"
-                textResultsResult.color = "red"
+                textResultValue1.text = "Recusado"
+                textResultsResult1.color = "red"
             }
         }
     }
@@ -258,8 +270,8 @@ Rectangle {
     Component.onCompleted: {
         chkboxModeDefault.checked = true;
         chkboxResultFalse.checked = true;
-        textResultValue.text = "Não executado"
-        textResultsResult.color = "yellow"
+        textResultValue1.text = "Não executado"
+        textResultsResult1.color = "yellow"
     }
 
 }

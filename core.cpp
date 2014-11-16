@@ -24,20 +24,8 @@ void Core::execute(int mode){
         this->main.execute(_mode, this);
 }
 
-void Core::trueAcceptance(){
-    this->main.getVInterfaceDTO().setFeedback31(0);
-}
-
-void Core::trueRejection(){
-    this->main.getVInterfaceDTO().setFeedback31(1);
-}
-
-void Core::falseAcceptance(){
-    this->main.getVInterfaceDTO().setFeedback31(2);
-}
-
-void Core::falseRejection(){
-    this->main.getVInterfaceDTO().setFeedback31(3);
+void Core::setFeedback(bool feedback){
+    this->main.updateMetrics(feedback, this);
 }
 
 void Core::metricsScreenRequest(){
@@ -66,8 +54,20 @@ float Core::getMinutiaeExtractionTime(void){
 float Core::getMatchingTime(void){
     return this->main.getVInterfaceDTO().getMatchingTime3();
 }
-bool Core::getAccepted(void){
+bool Core::getAccepted1(void){
+    return this->main.getVInterfaceDTO().getAccepted1();
+}
+bool Core::getAccepted2(void){
+    return this->main.getVInterfaceDTO().getAccepted2();
+}
+bool Core::getAccepted31(void){
     return this->main.getVInterfaceDTO().getAccepted31();
+}
+bool Core::getAccepted32(void){
+    return this->main.getVInterfaceDTO().getAccepted32();
+}
+bool Core::getAccepted33(void){
+    return this->main.getVInterfaceDTO().getAccepted33();
 }
 
 void Core::callback(void){
