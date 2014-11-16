@@ -36,7 +36,12 @@ public:
     Q_INVOKABLE float getBinarizationTime(void);
     Q_INVOKABLE float getMinutiaeExtractionTime(void);
     Q_INVOKABLE float getMatchingTime(void);
-    Q_INVOKABLE bool getAccepted(void);
+    Q_INVOKABLE bool getAccepted1(void);
+    Q_INVOKABLE bool getAccepted2(void);
+    Q_INVOKABLE bool getAccepted31(void);
+    Q_INVOKABLE bool getAccepted32(void);
+    Q_INVOKABLE bool getAccepted33(void);
+    Q_INVOKABLE void setFeedback(bool feedback);
 
 signals:
     void executionComplete();

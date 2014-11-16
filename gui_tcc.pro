@@ -30,6 +30,8 @@ else:unix: LIBS += -L$$PWD/../../core/tcc_fp/Debug/ -lTCC\ FP
 
 INCLUDEPATH += $$PWD/../../core/tcc_fp/src
 DEPENDPATH += $$PWD/../../core/tcc_fp/Debug
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../tcc_fp/Debug/debug/ -lTCC\ FP
+else:unix: LIBS += -L$$PWD/../tcc_fp/Debug/ -lTCC\ FP
 
 OTHER_FILES += \
     qml/gui_tcc/ExecutionScreen.qml
