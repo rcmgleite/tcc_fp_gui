@@ -27,11 +27,9 @@ OTHER_FILES += \
 
 QMAKE_CXXFLAGS += -std=c++11
 
-
-
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../tcc_fp/Debug/release/ -lTCC\ FP
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../tcc_fp/Debug/debug/ -lTCC\ FP
 else:unix: LIBS += -L$$PWD/../tcc_fp/Debug/ -lTCC\ FP
 
-INCLUDEPATH += $$PWD/../tcc_fp/src
+INCLUDEPATH += $$PWD/../tcc_fp/Debug
 DEPENDPATH += $$PWD/../tcc_fp/Debug
