@@ -1,7 +1,7 @@
 import QtQuick 1.1
 
 Rectangle{
-    width: 1200
+    width: 1400
     height: 700
     color: "#eeeeee"
 

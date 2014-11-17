@@ -2,7 +2,7 @@ import QtQuick 1.1
 
 Rectangle {
     id: header
-    width: 1200
+    width: parent.width
     height: 40
 
     property string pageName: "FPrint - Pagina inicial"

@@ -2,14 +2,15 @@ import QtQuick 1.1
 //Paleta de cores: http://www.color-hex.com/color-palette/185
 
 Rectangle{
-    width: 1200
+    width: 1300
     height: 700
     color: "#dfe3ee"
 
     Header{
         id: header
         anchors.top: parent.top
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.left: parent.left
+        anchors.right: parent.right
         pageName: "FPrint - Pagina inicial"
     }
 
@@ -27,11 +28,11 @@ Rectangle{
         visible: true
     }
 
-//    StagesScreen{
-//        id: stagesScreen
-//        signal metricsPageRequested
-//        anchors.top: separetor.bottom
-//        visible: false
-//    }
+    StagesScreen{
+        id: stagesScreen
+        anchors.top: upperMainScreen.bottom
+        anchors.left: menu.right
+        visible: true
+    }
 }
 
