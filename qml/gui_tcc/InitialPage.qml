@@ -1,31 +1,38 @@
 import QtQuick 1.1
+//Paleta de cores: http://www.color-hex.com/color-palette/185
 
 Rectangle{
-    width: 1200
+    width: 1300
     height: 700
-    color: "#eeeeee"
+    color: "#dfe3ee"
 
-    UpperMainScreen{
-        id:upperMainScreen
+    Header{
+        id: header
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        pageName: "FPrint - Pagina inicial"
     }
 
-    Image {
-        id: separetor
-        anchors.top: upperMainScreen.bottom
-        anchors.topMargin: 5
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: 1100
-        height: 1
-        source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+    Menu{
+        id:menu
+        anchors.top: header.bottom
+        anchors.left: parent.left
+        pageSelected: "initialPage"
+    }
+
+    ExecutionScreen{
+        id:upperMainScreen
+        anchors.top: header.bottom
+        anchors.left: menu.right
+        visible: true
     }
 
     StagesScreen{
         id: stagesScreen
-        signal metricsPageRequested
-        anchors.top: separetor.bottom
+        anchors.top: upperMainScreen.bottom
+        anchors.left: menu.right
+        visible: true
     }
-
-
-
 }
 

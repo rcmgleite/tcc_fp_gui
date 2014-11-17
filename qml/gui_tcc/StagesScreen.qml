@@ -2,226 +2,290 @@ import QtQuick 1.1
 
 Rectangle {
     id: stagesScreen
-    width: parent.width
-    height: 400
+    width: 1080
+    height: 530
     color: "transparent"
 
-    Text {
-        id: stageName
-        anchors.top: parent.top
-        anchors.topMargin: 10
-        anchors.horizontalCenter: parent.horizontalCenter
-        font.family: "OpenSans"
-        font.pointSize: 20
-        text: "Etapa: "
-    }
-
-    //NO PRE-PROCESSING - NO ADAPT
     Rectangle{
-        id: noPreNoAdaptContainer
-        anchors.top: stageName.bottom
+        id: executionContainer
+        color: "transparent"
+        anchors.top: parent.top
         anchors.left: parent.left
-        anchors.leftMargin: 50
-        width: 300
-
-
-        Text {
-            id: noPreNoAdaptLabel
-            anchors.top: parent.bottom
-            anchors.topMargin: 20
-            anchors.left: parent.left
-            anchors.leftMargin: 50
-            font.family: "OpenSans"
-            font.pointSize: 14
-            text: "*Sem pré-processamento\n*Sem Adaptatividade"
-        }
-
-        Image {
-            id: noPreNoAdaptImage
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.top: noPreNoAdaptLabel.bottom
-            anchors.topMargin: 10
-            width: 150
-            height: 150
-            source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif"
-            cache: false
-        }
-
-
-        LabeledTextview {
-            id: textNoPreNoAdaptExecTime
-            anchors.top: noPreNoAdaptImage.bottom
-            anchors.topMargin: 20
-            anchors.left: parent.left
-            anchors.leftMargin: 50
-            label: "Tempo(s): "
-            value: ""
-        }
-
-    }
-
-    Image {
-        id: separetor1
-        anchors.top: parent.top
-        anchors.topMargin: 30
-        anchors.left: noPreNoAdaptContainer.right
-        anchors.leftMargin: 50
-        width: 1
-        height: 250
-        source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
-    }
-
-    Rectangle{
-        id: withPreNoAdaptContainer
-        anchors.top: stageName.bottom
-        anchors.left: noPreNoAdaptContainer.right
-        anchors.leftMargin: 100
-        width: 300
-        Text {
-            id: withPreNoAdaptLabel
-            anchors.top: parent.bottom
-            anchors.topMargin: 20
-            anchors.left: parent.left
-            anchors.leftMargin: 50
-            font.family: "OpenSans"
-            font.pointSize: 14
-            text: "*Com pré-processamento\n*Sem Adaptatividade"
-        }
-
-        Image {
-            id: withPreNoAdaptImage
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.top: withPreNoAdaptLabel.bottom
-            anchors.topMargin: 10
-            width: 150
-            height: 150
-            source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif"
-            cache: false
-        }
-
-        LabeledTextview {
-            id: textWithPreNoAdaptExecTime
-            anchors.top: withPreNoAdaptImage.bottom
-            anchors.topMargin: 20
-            anchors.left: parent.left
-            anchors.leftMargin: 50
-            label: "Tempo(s): "
-            value: ""
-        }
-    }
-
-    Image {
-        id: separetor2
-        anchors.top: parent.top
-        anchors.topMargin: 30
-        anchors.left: withPreNoAdaptContainer.right
-        anchors.leftMargin: 50
-        width: 1
-        height: 250
-        source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
-    }
-
-    Rectangle{
-        id: withPreWithAdaptContainer
-        anchors.top: stageName.bottom
-        anchors.left: withPreNoAdaptContainer.right
-        anchors.leftMargin: 100
-        width: 300
-
-        Text {
-            id: withPreWithAdaptLabel
-            anchors.top: parent.bottom
-            anchors.topMargin: 20
-            anchors.left: parent.left
-            anchors.leftMargin: 50
-            font.family: "OpenSans"
-            font.pointSize: 14
-            text: "*Com pré-processamento\n*Com Adaptatividade"
-        }
-
-        Image {
-            id: withPreWithAdaptImage
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.top: withPreWithAdaptLabel.bottom
-            anchors.topMargin: 10
-            width: 150
-            height: 150
-            source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif"
-            cache: false
-        }
-
-        LabeledTextview {
-            id: textWithPreWithAdaptExecTime
-            anchors.top: withPreWithAdaptImage.bottom
-            anchors.topMargin: 20
-            anchors.left: parent.left
-            anchors.leftMargin: 50
-            label: "Tempo(s): "
-            value: ""
-        }
-    }
-
-    //bottom buttons
-    CustomButtom{
-        id: nextStageButton
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 20
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: 120
-        buttonLabel: "Próxima Etapa"
-        buttonLabelColor: "black"
-        onButtonClick: {
-            if (stagesScreen.state === "default")
-                stagesScreen.state = "windowing"
-            else if (stagesScreen.state === "windowing")
-                stagesScreen.state = "equalization"
-            else if (stagesScreen.state === "equalization")
-                stagesScreen.state = "gabor"
-            else if (stagesScreen.state === "gabor")
-                stagesScreen.state = "binarization"
-            else if (stagesScreen.state === "binarization")
-                stagesScreen.state = "minutiaExtraction"
-            else if (stagesScreen.state === "minutiaExtraction")
-                stagesScreen.state = "matching"
-        }
-    }
-
-    CustomButtom{
-        id: previousStageButton
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 20
-        anchors.right: nextStageButton.left
-        anchors.rightMargin: 5
-        width: 120
-        buttonLabel: "Etapa Anterior"
-        buttonLabelColor: "black"
-        onButtonClick: {
-            if (stagesScreen.state === "matching")
-                stagesScreen.state = "minutiaExtraction"
-            else if (stagesScreen.state === "minutiaExtraction")
-                stagesScreen.state = "binarization"
-            else if (stagesScreen.state === "binarization")
-                stagesScreen.state = "gabor"
-            else if (stagesScreen.state === "gabor")
-                stagesScreen.state = "equalization"
-            else if (stagesScreen.state === "equalization")
-                stagesScreen.state = "windowing"
-            else if (stagesScreen.state === "windowing")
-                stagesScreen.state = "default"
-        }
-    }
-
-    CustomButtom{
-        id: metricsButton
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 20
         anchors.right: parent.right
-        anchors.rightMargin: 30
-        buttonLabel: "Métricas"
-        buttonLabelColor: "black"
-        onButtonClick: {
-            console.log(">metricsButton called");
-            core.metricsScreenRequest();
+        height: 480
+
+        Text {
+            id: stageName
+            anchors.top: parent.top
+            anchors.topMargin: 10
+            anchors.horizontalCenter: parent.horizontalCenter
+            font.family: "OpenSans"
+            font.pointSize: 20
+            text: "Etapa: "
+        }
+
+        //bottom buttons
+        CustomButtom{
+            id: nextStageButton
+            anchors.top: stageName.top
+            anchors.right: parent.right
+            anchors.rightMargin: 20
+            width: 120
+            buttonLabel: "Próxima Etapa"
+            buttonLabelColor: "black"
+            onButtonClick: {
+                if (stagesScreen.state === "default")
+                    stagesScreen.state = "windowing"
+                else if (stagesScreen.state === "windowing")
+                    stagesScreen.state = "equalization"
+                else if (stagesScreen.state === "equalization")
+                    stagesScreen.state = "gabor"
+                else if (stagesScreen.state === "gabor")
+                    stagesScreen.state = "binarization"
+                else if (stagesScreen.state === "binarization")
+                    stagesScreen.state = "minutiaExtraction"
+                else if (stagesScreen.state === "minutiaExtraction")
+                    stagesScreen.state = "matching"
+            }
+        }
+
+        CustomButtom{
+            id: previousStageButton
+            anchors.top: stageName.top
+            anchors.left: parent.left
+            anchors.leftMargin: 10
+            width: 120
+            buttonLabel: "Etapa Anterior"
+            buttonLabelColor: "black"
+            onButtonClick: {
+                if (stagesScreen.state === "matching")
+                    stagesScreen.state = "minutiaExtraction"
+                else if (stagesScreen.state === "minutiaExtraction")
+                    stagesScreen.state = "binarization"
+                else if (stagesScreen.state === "binarization")
+                    stagesScreen.state = "gabor"
+                else if (stagesScreen.state === "gabor")
+                    stagesScreen.state = "equalization"
+                else if (stagesScreen.state === "equalization")
+                    stagesScreen.state = "windowing"
+                else if (stagesScreen.state === "windowing")
+                    stagesScreen.state = "default"
+            }
+        }
+
+
+        //NO PRE-PROCESSING - NO ADAPT
+        Rectangle{
+            id: noPreNoAdaptContainer
+            anchors.top: stageName.bottom
+            anchors.left: executionContainer.left
+            width: 300
+
+            Text {
+                id: noPreNoAdaptLabel
+                anchors.top: parent.bottom
+                anchors.topMargin: 20
+                anchors.left: parent.left
+                anchors.leftMargin: 20
+                font.family: "OpenSans"
+                font.pointSize: 14
+                text: "*Sem pré-processamento\n*Sem Adaptatividade"
+            }
+
+            Image {
+                id: noPreNoAdaptImage
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.top: noPreNoAdaptLabel.bottom
+                anchors.topMargin: 10
+                width: 230
+                height: 230
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif"
+                cache: false
+            }
+
+            Table5x1{
+                id: table5x1_1
+                anchors.top: noPreNoAdaptImage.bottom
+                anchors.topMargin: 32
+                anchors.left: parent.left
+            }
+            Image {
+                id: separetor1
+                anchors.top: parent.top
+                anchors.topMargin: 30
+                anchors.right: parent.right
+                width: 1
+                height: 408
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_vertical_limit.png"
+            }
+
+        }
+
+        Rectangle{
+            id: withPreNoAdaptContainer
+            anchors.top: stageName.bottom
+            anchors.left: noPreNoAdaptContainer.right
+            anchors.leftMargin: 20
+            width: 300
+
+            Text {
+                id: withPreNoAdaptLabel
+                anchors.top: parent.bottom
+                anchors.topMargin: 20
+                anchors.left: parent.left
+                anchors.leftMargin: 20
+                font.family: "OpenSans"
+                font.pointSize: 14
+                text: "*Com pré-processamento\n*Sem Adaptatividade"
+            }
+
+            Image {
+                id: withPreNoAdaptImage
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.top: withPreNoAdaptLabel.bottom
+                anchors.topMargin: 10
+                width: 230
+                height: 230
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif"
+                cache: false
+            }
+
+            Table5x1{
+                id: table5x1_2
+                anchors.top: withPreNoAdaptImage.bottom
+                anchors.topMargin: 32
+                anchors.left: parent.left
+                anchors.leftMargin: -20
+            }
+
+            Image {
+                id: separetor2
+                anchors.top: parent.top
+                anchors.topMargin: 30
+                anchors.right: parent.right
+                width: 1
+                height: 408
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_vertical_limit.png"
+            }
+        }
+
+        Rectangle{
+            id: withPreWithAdaptContainer
+            anchors.top: stageName.bottom
+            anchors.left: withPreNoAdaptContainer.right
+            anchors.leftMargin: 20
+            width: 300
+
+            Text {
+                id: withPreWithAdaptLabel
+                anchors.top: parent.bottom
+                anchors.topMargin: 20
+                anchors.left: parent.left
+                anchors.leftMargin: 20
+                font.family: "OpenSans"
+                font.pointSize: 14
+                text: "*Com pré-processamento\n*Com Adaptatividade"
+            }
+
+            Image {
+                id: withPreWithAdaptImage
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.top: withPreWithAdaptLabel.bottom
+                anchors.topMargin: 10
+                width: 230
+                height: 230
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif"
+                cache: false
+            }
+
+            Table5x3 {
+                id:table5x3
+                anchors.top: withPreWithAdaptImage.bottom
+                anchors.topMargin: 12
+                anchors.left: parent.left
+                anchors.leftMargin: -18
+            }
+
+        }
+
+        Image {
+            id: bottomSeparator
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.leftMargin: 10
+            width: 1050
+            height: 1
+            source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_separator.png"
+        }
+    }
+
+    //FEEDBACK CONTAINER
+    Rectangle{
+        id: feedbackContainer
+        anchors.top: executionContainer.bottom
+        anchors.topMargin: 10
+        anchors.left: parent.left
+        anchors.right: parent.right
+        height: 50
+        color: "transparent"
+
+        Text {
+            id: feedbackLabel
+            anchors.top: parent.top
+            anchors.topMargin: 0
+            anchors.left: parent.left
+            anchors.leftMargin: 20
+            font.family: "OpenSans"
+            font.pointSize: 20
+            font.italic: true
+            text: "Feedback"
+        }
+
+        Checkbox {
+            id:chkboxResultFalse
+            anchors.left: feedbackLabel.right
+            anchors.leftMargin: 20
+            anchors.top: feedbackLabel.top
+            anchors.topMargin: 5
+            label: "Usuário não cadastrado"
+            onCkClicked: {
+                if (checked){
+                    chkboxResultTrue.checked = false
+                }
+            }
+        }
+
+        Checkbox {
+            id:chkboxResultTrue
+            anchors.left: chkboxResultFalse.right
+            anchors.leftMargin: 20
+            anchors.top: feedbackLabel.top
+            anchors.topMargin: 5
+            label: "Usuário cadastrado"
+            onCkClicked: {
+                if (checked){
+                   chkboxResultFalse.checked = false
+                }
+            }
+        }
+
+        CustomButtom{
+            id: sendFeedbackButton
+            anchors.left: chkboxResultTrue.right
+            anchors.leftMargin: 20
+            anchors.top: feedbackLabel.top
+            anchors.topMargin: -5
+            width: 150
+            buttonLabel: "Enviar feedback"
+            buttonLabelColor: "black"
+            onButtonClick: {
+                if (chkboxResultTrue.checked) {
+                    core.setFeedback(true);
+                }
+                else {
+                    core.setFeedback(false);
+                }
+            }
         }
     }
 
@@ -273,8 +337,44 @@ Rectangle {
             }
 
             PropertyChanges {
-                target: textWithPreNoAdaptExecTime
-                value: core.getWindowingTime()
+                target: table5x1_1
+                val1x1: ""
+                val2x1: core.getAccepted1()
+                val3x1: "TODO GET TOTAL TIME"
+                val4x1: "TODO"
+                val5x1: "TODO"
+            }
+
+            PropertyChanges {
+                target: table5x1_2
+                val1x1: ""
+                val2x1: core.getAccepted2()
+                val3x1: "TODO GET TOTAL TIME"
+                val4x1: "TODO"
+                val5x1: "TODO"
+            }
+
+            PropertyChanges {
+                target: table5x3
+                val1x1: core.getWindowingTime3()
+                val2x1: core.getAccepted32()
+                val3x1: "TODO GET TOTAL TIME"
+                val4x1: "TODO"
+                val5x1: "TODO"
+
+                val1x2: core.getWindowingTime3()
+                val2x2: core.getAccepted31()
+                val3x2: "TODO"
+                val4x2: "TODO"
+                val5x2: "TODO"
+
+                val1x3: core.getWindowingTime3()
+                val2x3: core.getAccepted33()
+                val3x3: "TODO"
+                val4x3: "TODO"
+                val5x3: "TODO"
+
+
             }
 
         },
@@ -301,9 +401,46 @@ Rectangle {
                 visible: true
             }
 
+
             PropertyChanges {
-                target: textWithPreNoAdaptExecTime
-                value: core.getEqualizationTime()
+                target: table5x1_1
+                val1x1: ""
+                val2x1: core.getAccepted1()
+                val3x1: "TODO GET TOTAL TIME"
+                val4x1: "TODO"
+                val5x1: "TODO"
+            }
+
+            PropertyChanges {
+                target: table5x1_2
+                val1x1: core.getEqualizationTime2()
+                val2x1: core.getAccepted2()
+                val3x1: "TODO GET TOTAL TIME"
+                val4x1: "TODO"
+                val5x1: "TODO"
+            }
+
+            PropertyChanges {
+                target: table5x3
+                val1x1: core.getEqualizationTime3()
+                val2x1: core.getAccepted32()
+                val3x1: "TODO GET TOTAL TIME"
+                val4x1: "TODO"
+                val5x1: "TODO"
+
+                val1x2: core.getEqualizationTime3()
+                val2x2: core.getAccepted31()
+                val3x2: "TODO"
+                val4x2: "TODO"
+                val5x2: "TODO"
+
+                val1x3: core.getEqualizationTime3()
+                val2x3: core.getAccepted33()
+                val3x3: "TODO"
+                val4x3: "TODO"
+                val5x3: "TODO"
+
+
             }
         },
 

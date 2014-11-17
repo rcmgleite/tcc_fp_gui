@@ -3,25 +3,8 @@
 
 using namespace std;
 
-void Core::execute(int mode){
-        cout << "Chamou execute() usando o QT" << endl;
-        SystemMode _mode;
-
-        switch (mode){
-            case SystemMode::DEFAULT:
-                _mode = SystemMode::DEFAULT;
-                break;
-
-            case SystemMode::RIGID:
-                _mode = SystemMode::RIGID;
-                break;
-
-            case SystemMode::TOLERANT:
-                _mode = SystemMode::TOLERANT;
-                break;
-        }
-        cout << "> Selected mode: " << _mode << endl;
-        this->main.execute(_mode, this);
+void Core::execute(){
+        this->main.execute(this, "/home/priscila/BDs_imagens_de_digitais/2004/DB1/103_1.tif");
 }
 
 void Core::setFeedback(bool feedback){
@@ -34,6 +17,10 @@ void Core::metricsScreenRequest(){
 
 void Core::initalScreenRequest(){
     emit signalInitialScreenRequest();
+}
+
+void Core::stagesScreenRequest(){
+    emit signalStagesScreenRequest();
 }
 
 float Core::getWindowingTime(void){
@@ -68,6 +55,48 @@ bool Core::getAccepted32(void){
 }
 bool Core::getAccepted33(void){
     return this->main.getVInterfaceDTO().getAccepted33();
+}
+
+float Core::getMinutiaeExtractionTime2(void){
+    return this->main.getVInterfaceDTO().getMinutiaeExtractionTime2();
+}
+
+float Core::getMatchingTime2(void){
+    return this->main.getVInterfaceDTO().getMatchingTime2();
+}
+
+float Core::getEqualizationTim2(void){
+    return this->main.getVInterfaceDTO().getEqualizationTime2();
+}
+
+float Core::getBinarizationTime2(void){
+    return this->main.getVInterfaceDTO().getBinarizationTime2();
+}
+
+float Core::getMinutiaeExtractionTime3(void){
+    return this->main.getVInterfaceDTO().getMinutiaeExtractionTime3();
+}
+float Core::getMatchingTime31(void){
+    return this->main.getVInterfaceDTO().getMatchingTime3();
+}
+
+float Core::getMatchingTime32(void){
+    return this->main.getVInterfaceDTO().getMatchingTime3();
+}
+float Core::getMatchingTime33(void){
+    return this->main.getVInterfaceDTO().getMatchingTime3();
+}
+float Core::getWindowingTime3(void){
+    return this->main.getVInterfaceDTO().getWindowingTime3();
+}
+float Core::getEqualizationTim3(void){
+    return this->main.getVInterfaceDTO().getEqualizationTime3();
+}
+float Core::getGaborFilterTime3(void){
+    return this->main.getVInterfaceDTO().getGaborFilterTime3();
+}
+float Core::getBinarizationTim3(void){
+    return this->main.getVInterfaceDTO().getBinarizationTime3();
 }
 
 void Core::callback(void){
