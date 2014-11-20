@@ -4,7 +4,8 @@
 using namespace std;
 
 void Core::execute(){
-        this->main.execute(this, "/home/priscila/BDs_imagens_de_digitais/2004/DB1/103_1.tif");
+    //this->main.execute(this, "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/original.tif");
+    this->callback();
 }
 
 void Core::setFeedback(bool feedback){
@@ -15,8 +16,8 @@ void Core::metricsScreenRequest(){
     emit signalMetricsScreenRequest();
 }
 
-void Core::initalScreenRequest(){
-    emit signalInitialScreenRequest();
+void Core::algorithmScreenRequest(){
+    emit signalAlgorithmScreenRequest();
 }
 
 void Core::stagesScreenRequest(){
@@ -46,6 +47,14 @@ bool Core::getAccepted32(void){
 }
 bool Core::getAccepted33(void){
     return this->main.getVInterfaceDTO().getAccepted33();
+}
+
+float Core::getMatchingTime1(void){
+    return this->main.getVInterfaceDTO().getMatchingTime1();
+}
+
+float Core::getMinutiaeExtractionTime1(void){
+    return this->main.getVInterfaceDTO().getMinutiaeExtractionTime1();
 }
 
 float Core::getMinutiaeExtractionTime2(void){

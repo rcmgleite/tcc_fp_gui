@@ -7,7 +7,7 @@ Rectangle{
 
     Loader {
         id: pageLoader
-        source: "InitialPage.qml"
+        source: "AlgorithmScreen.qml"
         focus: true
     }
 
@@ -17,8 +17,8 @@ Rectangle{
             pageLoader.source = "MetricsScreen.qml"
         }
 
-        onSignalInitialScreenRequest:{
-            pageLoader.source = "InitialPage.qml"
+        onSignalAlgorithmScreenRequest:{
+            pageLoader.source = "AlgorithmScreen.qml"
         }
 
         onSignalStagesScreenRequest: {

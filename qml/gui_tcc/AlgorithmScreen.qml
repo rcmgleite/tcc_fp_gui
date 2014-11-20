@@ -18,7 +18,8 @@ Rectangle{
         id:menu
         anchors.top: header.bottom
         anchors.left: parent.left
-        pageSelected: "initialPage"
+        pageSelected: "algorithmScreen"
+        hasExecuted: core.getHasExecuted()
     }
 
     ExecutionScreen{
@@ -33,6 +34,14 @@ Rectangle{
         anchors.top: upperMainScreen.bottom
         anchors.left: menu.right
         visible: true
+    }
+
+    Connections{
+        target: core
+
+        onExecutionComplete:{
+           menu.hasExecuted = core.getHasExecuted();
+        }
     }
 }
 

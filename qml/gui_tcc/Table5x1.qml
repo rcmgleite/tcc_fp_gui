@@ -13,11 +13,11 @@ Rectangle {
    property string rowLabel4: "Nº Minúcias"
    property string rowLabel5: "Qualidade min"
 
-   property string val1x1: "val11"
-   property string val2x1: "val21"
-   property string val3x1: "val31"
-   property string val4x1: "val41"
-   property string val5x1: "val51"
+   property string val1x1: ""
+   property string val2x1: ""
+   property string val3x1: ""
+   property string val4x1: ""
+   property string val5x1: ""
 
 
 
@@ -150,7 +150,7 @@ Rectangle {
        anchors.leftMargin: parent.width/3
        width: 1
        height: 100
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
    }
 
 
@@ -162,7 +162,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -172,7 +172,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -182,7 +182,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -192,7 +192,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -202,7 +202,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -212,7 +212,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
 }

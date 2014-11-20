@@ -21,13 +21,34 @@ public:
     Core(){
 
     }
+
+    QString currState = "default";
+    bool hasExecuted = false;
+
+    Q_INVOKABLE void setCurrState(QString state){
+        this->currState = state;
+    }
+
+    Q_INVOKABLE QString getCurrState(){
+        return this->currState;
+    }
+
+    Q_INVOKABLE void setHasExecuted(bool hasExecuted){
+        this->hasExecuted = hasExecuted;
+    }
+
+    Q_INVOKABLE bool getHasExecuted(void){
+        return this->hasExecuted;
+    }
+
     void callback(void);
     /*
     *   Todo o método C++ que vai ser chamado no QML tem q ser Q_INVOKABLE
     */
     Q_INVOKABLE void execute();
+    //SCREENS
     Q_INVOKABLE void metricsScreenRequest();
-    Q_INVOKABLE void initalScreenRequest();
+    Q_INVOKABLE void algorithmScreenRequest();
     Q_INVOKABLE void stagesScreenRequest();
 
     Q_INVOKABLE bool getAccepted1(void);
@@ -37,6 +58,9 @@ public:
     Q_INVOKABLE bool getAccepted33(void);
     Q_INVOKABLE void setFeedback(bool feedback);
 
+
+    Q_INVOKABLE float getMatchingTime1(void);
+    Q_INVOKABLE float getMinutiaeExtractionTime1(void);
     Q_INVOKABLE float getMinutiaeExtractionTime2(void);
     Q_INVOKABLE float getMatchingTime2(void);
     Q_INVOKABLE float getEqualizationTime2(void);
@@ -68,8 +92,16 @@ public:
 signals:
     void executionComplete();
     void signalMetricsScreenRequest();
-    void signalInitialScreenRequest();
+    void signalAlgorithmScreenRequest();
     void signalStagesScreenRequest();
+
+    //STEPS
+    void signalWindowingStepRequest();
+    void signalEqualizationStepRequest();
+    void signalGaborStepRequest();
+    void signalBinarizationStepRequest();
+    void signalMinutiaExtractionStepRequest();
+    void signalMatchingStepRequest();
 };
 
 #endif // TEST_HPP

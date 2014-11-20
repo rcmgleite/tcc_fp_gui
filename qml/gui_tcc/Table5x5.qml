@@ -20,35 +20,35 @@ Rectangle {
    property string rowLabel4: "% verdadeira rejeição"
    property string rowLabel5: "Tempo médio"
 
-   property string val1x1: "val11"
-   property string val1x2: "val12"
-   property string val1x3: "val13"
-   property string val1x4: "val14"
-   property string val1x5: "val15"
+   property string val1x1: ""
+   property string val1x2: ""
+   property string val1x3: ""
+   property string val1x4: ""
+   property string val1x5: ""
 
-   property string val2x1: "val21"
-   property string val2x2: "val22"
-   property string val2x3: "val23"
-   property string val2x4: "val24"
-   property string val2x5: "val25"
+   property string val2x1: ""
+   property string val2x2: ""
+   property string val2x3: ""
+   property string val2x4: ""
+   property string val2x5: ""
 
-   property string val3x1: "val31"
-   property string val3x2: "val32"
-   property string val3x3: "val33"
-   property string val3x4: "val34"
-   property string val3x5: "val35"
+   property string val3x1: ""
+   property string val3x2: ""
+   property string val3x3: ""
+   property string val3x4: ""
+   property string val3x5: ""
 
-   property string val4x1: "val41"
-   property string val4x2: "val42"
-   property string val4x3: "val43"
-   property string val4x4: "val44"
-   property string val4x5: "val45"
+   property string val4x1: ""
+   property string val4x2: ""
+   property string val4x3: ""
+   property string val4x4: ""
+   property string val4x5: ""
 
-   property string val5x1: "val51"
-   property string val5x2: "val52"
-   property string val5x3: "val53"
-   property string val5x4: "val54"
-   property string val5x5: "val55"
+   property string val5x1: ""
+   property string val5x2: ""
+   property string val5x3: ""
+   property string val5x4: ""
+   property string val5x5: ""
 
 
 //   property string cellWidth: "120"
@@ -459,7 +459,7 @@ Rectangle {
        anchors.leftMargin: -10
        width: 1
        height: 240
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
    }
 
    Image {
@@ -470,7 +470,7 @@ Rectangle {
        anchors.leftMargin: -10
        width: 1
        height: 240
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
    }
 
    Image {
@@ -481,7 +481,7 @@ Rectangle {
        anchors.leftMargin: -10
        width: 1
        height: 240
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
    }
 
    Image {
@@ -492,7 +492,7 @@ Rectangle {
        anchors.leftMargin: -10
        width: 1
        height: 240
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
    }
 
    Image {
@@ -503,7 +503,7 @@ Rectangle {
        anchors.leftMargin: -10
        width: 1
        height: 240
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
    }
 
    //horizontal serarators
@@ -514,7 +514,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -524,7 +524,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -534,7 +534,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -544,7 +544,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -554,7 +554,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -564,7 +564,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
 }
