@@ -88,7 +88,11 @@ Rectangle{
         buttonLabel: "Voltar"
         buttonLabelColor: "black"
         onButtonClick: {
-            core.initalScreenRequest();
+            core.algorithmScreenRequest();
         }
     }
+
+//    Component.onCompleted: {
+//        metricsTable.val1x1 = core.get
+//    }
 }

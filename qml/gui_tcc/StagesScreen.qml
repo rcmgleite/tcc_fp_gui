@@ -462,10 +462,44 @@ Rectangle {
             }
 
             PropertyChanges {
-                target: textWithPreNoAdaptExecTime
-                value: core.getGaborFilterTime()
-
+                target: table5x1_1
+                val1x1: ""
+                val2x1: core.getAccepted1()
+                val3x1: core.getTotalTime1()
+                val4x1: core.getMinutiaeQuantity1()
+                val5x1: core.getMinutiaeQuality1()
             }
+
+            PropertyChanges {
+                target: table5x1_2
+                val1x1: ""
+                val2x1: core.getAccepted2()
+                val3x1: core.getTotalTime2()
+                val4x1: core.getMinutiaeQuantity2()
+                val5x1: core.getMinutiaeQuality2()
+            }
+
+            PropertyChanges {
+                target: table5x3
+                val1x1: core.getGaborFilterTime3()
+                val2x1: core.getAccepted32()
+                val3x1: core.getTotalTime32()
+                val4x1: core.getMinutiaeQuantity3()
+                val5x1: core.getMinutiaeQuality3()
+
+                val1x2: core.getGaborFilterTime3()
+                val2x2: core.getAccepted31()
+                val3x2: core.getTotalTime31()
+                val4x2: core.getMinutiaeQuantity3()
+                val5x2: core.getMinutiaeQuality3()
+
+                val1x3: core.getGaborFilterTime3()
+                val2x3: core.getAccepted33()
+                val3x3: core.getTotalTime33()
+                val4x3: core.getMinutiaeQuantity3()
+                val5x3: core.getMinutiaeQuality3()
+            }
+
         },
 
         State{
@@ -486,10 +520,44 @@ Rectangle {
             }
 
             PropertyChanges {
-                target: textWithPreNoAdaptExecTime
-                value: core.getBinarizationTime()
-
+                target: table5x1_1
+                val1x1: ""
+                val2x1: core.getAccepted1()
+                val3x1: core.getTotalTime1()
+                val4x1: core.getMinutiaeQuantity1()
+                val5x1: core.getMinutiaeQuality1()
             }
+
+            PropertyChanges {
+                target: table5x1_2
+                val1x1: core.getBinarizationTime2()
+                val2x1: core.getAccepted2()
+                val3x1: core.getTotalTime2()
+                val4x1: core.getMinutiaeQuantity2()
+                val5x1: core.getMinutiaeQuality2()
+            }
+
+            PropertyChanges {
+                target: table5x3
+                val1x1: core.getBinarizationTime3()
+                val2x1: core.getAccepted32()
+                val3x1: core.getTotalTime32()
+                val4x1: core.getMinutiaeQuantity3()
+                val5x1: core.getMinutiaeQuality3()
+
+                val1x2: core.getBinarizationTime3()
+                val2x2: core.getAccepted31()
+                val3x2: core.getTotalTime31()
+                val4x2: core.getMinutiaeQuantity3()
+                val5x2: core.getMinutiaeQuality3()
+
+                val1x3: core.getBinarizationTime3()
+                val2x3: core.getAccepted33()
+                val3x3: core.getTotalTime33()
+                val4x3: core.getMinutiaeQuantity3()
+                val5x3: core.getMinutiaeQuality3()
+            }
+
         },
 
         State{
@@ -520,10 +588,44 @@ Rectangle {
             }
 
             PropertyChanges {
-                target: textWithPreNoAdaptExecTime
-                value: core.getMinutiaeExtractionTime()
-
+                target: table5x1_1
+                val1x1: core.getMinutiaeExtractionTime1()
+                val2x1: core.getAccepted1()
+                val3x1: core.getTotalTime1()
+                val4x1: core.getMinutiaeQuantity1()
+                val5x1: core.getMinutiaeQuality1()
             }
+
+            PropertyChanges {
+                target: table5x1_2
+                val1x1: core.getMinutiaeExtractionTime2()
+                val2x1: core.getAccepted2()
+                val3x1: core.getTotalTime2()
+                val4x1: core.getMinutiaeQuantity2()
+                val5x1: core.getMinutiaeQuality2()
+            }
+
+            PropertyChanges {
+                target: table5x3
+                val1x1: core.getMinutiaeExtractionTime3()
+                val2x1: core.getAccepted32()
+                val3x1: core.getTotalTime32()
+                val4x1: core.getMinutiaeQuantity3()
+                val5x1: core.getMinutiaeQuality3()
+
+                val1x2: core.getMinutiaeExtractionTime3()
+                val2x2: core.getAccepted31()
+                val3x2: core.getTotalTime31()
+                val4x2: core.getMinutiaeQuantity3()
+                val5x2: core.getMinutiaeQuality3()
+
+                val1x3: core.getMinutiaeExtractionTime3()
+                val2x3: core.getAccepted33()
+                val3x3: core.getTotalTime33()
+                val4x3: core.getMinutiaeQuantity3()
+                val5x3: core.getMinutiaeQuality3()
+            }
+
         },
 
         State{
@@ -555,14 +657,48 @@ Rectangle {
             }
 
             PropertyChanges {
-                target: textWithPreNoAdaptExecTime
-                value: core.getMatchingTime32()
+                target: table5x1_1
+                val1x1: core.getMatchingTime1()
+                val2x1: core.getAccepted1()
+                val3x1: core.getTotalTime1()
+                val4x1: core.getMinutiaeQuantity1()
+                val5x1: core.getMinutiaeQuality1()
+            }
+
+            PropertyChanges {
+                target: table5x1_2
+                val1x1: core.getMatchingTime2()
+                val2x1: core.getAccepted2()
+                val3x1: core.getTotalTime2()
+                val4x1: core.getMinutiaeQuantity2()
+                val5x1: core.getMinutiaeQuality2()
+            }
+
+            PropertyChanges {
+                target: table5x3
+                val1x1: core.getMatchingTime31()
+                val2x1: core.getAccepted32()
+                val3x1: core.getTotalTime32()
+                val4x1: core.getMinutiaeQuantity3()
+                val5x1: core.getMinutiaeQuality3()
+
+                val1x2: core.getMatchingTime32()
+                val2x2: core.getAccepted31()
+                val3x2: core.getTotalTime31()
+                val4x2: core.getMinutiaeQuantity3()
+                val5x2: core.getMinutiaeQuality3()
+
+                val1x3: core.getMatchingTime33()
+                val2x3: core.getAccepted33()
+                val3x3: core.getTotalTime33()
+                val4x3: core.getMinutiaeQuantity3()
+                val5x3: core.getMinutiaeQuality3()
             }
         }
     ]
 
     Component.onCompleted: {
-        stagesScreen.state = "default"
+        stagesScreen.state = core.getCurrState()
     }
 
 
@@ -571,5 +707,27 @@ Rectangle {
         onExecutionComplete: {
             stagesScreen.state = "windowing"
         }
+
+        onSignalWindowingStepRequest: {
+            stagesScreen.state = "windowing"
+        }
+
+        onSignalEqualizationStepRequest:{
+            stagesScreen.state = "equalization"
+        }
+        onSignalGaborStepRequest:{
+            stagesScreen.state = "gabor"
+        }
+        onSignalBinarizationStepRequest:{
+            stagesScreen.state = "binarization"
+        }
+        onSignalMinutiaExtractionStepRequest: {
+            stagesScreen.state = "minutiaExtraction"
+        }
+        onSignalMatchingStepRequest: {
+            stagesScreen.state = "matching"
+        }
+
+
     }
 }

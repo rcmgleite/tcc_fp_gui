@@ -4,7 +4,8 @@
 using namespace std;
 
 void Core::execute(){
-        this->main.execute(this, "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/original.tif");
+    //this->main.execute(this, "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/original.tif");
+    this->callback();
 }
 
 void Core::setFeedback(bool feedback){
@@ -15,12 +16,32 @@ void Core::metricsScreenRequest(){
     emit signalMetricsScreenRequest();
 }
 
-void Core::initalScreenRequest(){
-    emit signalInitialScreenRequest();
+void Core::algorithmScreenRequest(){
+    emit signalAlgorithmScreenRequest();
 }
 
 void Core::stagesScreenRequest(){
     emit signalStagesScreenRequest();
+}
+
+void Core::windowingStepRequest(){
+    emit signalWindowingStepRequest();
+}
+
+void Core::equalizationStepRequest(){
+    emit signalEqualizationStepRequest();
+}
+void Core::gaborStepRequest(){
+    emit signalGaborStepRequest();
+}
+void Core::binarizationStepRequest(){
+    emit signalBinarizationStepRequest();
+}
+void Core::minutiaExtractionStepRequest(){
+    emit signalMinutiaExtractionStepRequest();
+}
+void Core::matchingStepRequest(){
+    emit signalMatchingStepRequest();
 }
 
 float Core::getMatchingTime31(void){
@@ -46,6 +67,14 @@ bool Core::getAccepted32(void){
 }
 bool Core::getAccepted33(void){
     return this->main.getVInterfaceDTO().getAccepted33();
+}
+
+float Core::getMatchingTime1(void){
+    return this->main.getVInterfaceDTO().getMatchingTime1();
+}
+
+float Core::getMinutiaeExtractionTime1(void){
+    return this->main.getVInterfaceDTO().getMinutiaeExtractionTime1();
 }
 
 float Core::getMinutiaeExtractionTime2(void){

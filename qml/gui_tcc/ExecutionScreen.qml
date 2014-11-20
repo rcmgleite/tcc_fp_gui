@@ -70,7 +70,9 @@ Rectangle {
             onButtonClick: {
                 //TODO
                 console.log('> executeButton clicked')
+                core.setHasExecuted(true)
                 core.execute()
+//                core.execute()
             }
         }
 
