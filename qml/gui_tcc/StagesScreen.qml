@@ -99,7 +99,7 @@ Rectangle {
                 anchors.topMargin: 10
                 width: 230
                 height: 230
-                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif"
+                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif"
                 cache: false
             }
 
@@ -116,7 +116,7 @@ Rectangle {
                 anchors.right: parent.right
                 width: 1
                 height: 408
-                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_vertical_limit.png"
+                source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
             }
 
         }
@@ -146,7 +146,7 @@ Rectangle {
                 anchors.topMargin: 10
                 width: 230
                 height: 230
-                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif"
+                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif"
                 cache: false
             }
 
@@ -165,7 +165,7 @@ Rectangle {
                 anchors.right: parent.right
                 width: 1
                 height: 408
-                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_vertical_limit.png"
+                source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
             }
         }
 
@@ -194,7 +194,7 @@ Rectangle {
                 anchors.topMargin: 10
                 width: 230
                 height: 230
-                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif"
+                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif"
                 cache: false
             }
 
@@ -215,7 +215,7 @@ Rectangle {
             anchors.leftMargin: 10
             width: 1050
             height: 1
-            source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_separator.png"
+            source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
         }
     }
 
@@ -340,39 +340,39 @@ Rectangle {
                 target: table5x1_1
                 val1x1: ""
                 val2x1: core.getAccepted1()
-                val3x1: "TODO GET TOTAL TIME"
-                val4x1: "TODO"
-                val5x1: "TODO"
+                val3x1: core.getTotalTime1()
+                val4x1: core.getMinutiaeQuantity1()
+                val5x1: core.getMinutiaeQuality1()
             }
 
             PropertyChanges {
                 target: table5x1_2
                 val1x1: ""
                 val2x1: core.getAccepted2()
-                val3x1: "TODO GET TOTAL TIME"
-                val4x1: "TODO"
-                val5x1: "TODO"
+                val3x1: core.getTotalTime2()
+                val4x1: core.getMinutiaeQuantity2()
+                val5x1: core.getMinutiaeQuality2()
             }
 
             PropertyChanges {
                 target: table5x3
                 val1x1: core.getWindowingTime3()
                 val2x1: core.getAccepted32()
-                val3x1: "TODO GET TOTAL TIME"
-                val4x1: "TODO"
-                val5x1: "TODO"
+                val3x1: core.getTotalTime32()
+                val4x1: core.getMinutiaeQuantity3()
+                val5x1: core.getMinutiaeQuality3()
 
                 val1x2: core.getWindowingTime3()
                 val2x2: core.getAccepted31()
-                val3x2: "TODO"
-                val4x2: "TODO"
-                val5x2: "TODO"
+                val3x2: core.getTotalTime31()
+                val4x2: core.getMinutiaeQuantity3()
+                val5x2: core.getMinutiaeQuality3()
 
                 val1x3: core.getWindowingTime3()
                 val2x3: core.getAccepted33()
-                val3x3: "TODO"
-                val4x3: "TODO"
-                val5x3: "TODO"
+                val3x3: core.getTotalTime33()
+                val4x3: core.getMinutiaeQuantity3()
+                val5x3: core.getMinutiaeQuality3()
 
 
             }
@@ -406,39 +406,39 @@ Rectangle {
                 target: table5x1_1
                 val1x1: ""
                 val2x1: core.getAccepted1()
-                val3x1: "TODO GET TOTAL TIME"
-                val4x1: "TODO"
-                val5x1: "TODO"
+                val3x1: core.getTotalTime1()
+                val4x1: core.getMinutiaeQuantity1()
+                val5x1: core.getMinutiaeQuality1()
             }
 
             PropertyChanges {
                 target: table5x1_2
                 val1x1: core.getEqualizationTime2()
                 val2x1: core.getAccepted2()
-                val3x1: "TODO GET TOTAL TIME"
-                val4x1: "TODO"
-                val5x1: "TODO"
+                val3x1: core.getTotalTime2()
+                val4x1: core.getMinutiaeQuantity2()
+                val5x1: core.getMinutiaeQuality2()
             }
 
             PropertyChanges {
                 target: table5x3
                 val1x1: core.getEqualizationTime3()
                 val2x1: core.getAccepted32()
-                val3x1: "TODO GET TOTAL TIME"
-                val4x1: "TODO"
-                val5x1: "TODO"
+                val3x1: core.getTotalTime32()
+                val4x1: core.getMinutiaeQuantity3()
+                val5x1: core.getMinutiaeQuality3()
 
                 val1x2: core.getEqualizationTime3()
                 val2x2: core.getAccepted31()
-                val3x2: "TODO"
-                val4x2: "TODO"
-                val5x2: "TODO"
+                val3x2: core.getTotalTime31()
+                val4x2: core.getMinutiaeQuantity3()
+                val5x2: core.getMinutiaeQuality3()
 
                 val1x3: core.getEqualizationTime3()
                 val2x3: core.getAccepted33()
-                val3x3: "TODO"
-                val4x3: "TODO"
-                val5x3: "TODO"
+                val3x3: core.getTotalTime33()
+                val4x3: core.getMinutiaeQuantity3()
+                val5x3: core.getMinutiaeQuality3()
 
 
             }
@@ -556,7 +556,7 @@ Rectangle {
 
             PropertyChanges {
                 target: textWithPreNoAdaptExecTime
-                value: core.getMatchingTime()
+                value: core.getMatchingTime32()
             }
         }
     ]

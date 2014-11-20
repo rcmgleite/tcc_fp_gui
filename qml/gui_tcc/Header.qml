@@ -5,7 +5,7 @@ Rectangle {
     width: parent.width
     height: 40
 
-    property string pageName: "FPrint - Pagina inicial"
+    property string pageName: "FPoli - Pagina inicial"
 
     Text {
         id: tccfp

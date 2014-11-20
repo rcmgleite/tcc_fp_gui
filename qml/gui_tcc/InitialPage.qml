@@ -11,7 +11,7 @@ Rectangle{
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
-        pageName: "FPrint - Pagina inicial"
+        pageName: "FPoli - Pagina inicial"
     }
 
     Menu{

@@ -36,7 +36,7 @@ Rectangle{
         anchors.topMargin: 40
         anchors.left: menu.right
         anchors.leftMargin: 20
-        text: qsTr("Legenadas:")
+        text: qsTr("Legendas:")
         font.family: "OpenSans"
         font.pointSize: 20
         font.italic: true
