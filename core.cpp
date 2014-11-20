@@ -23,18 +23,6 @@ void Core::stagesScreenRequest(){
     emit signalStagesScreenRequest();
 }
 
-float Core::getWindowingTime(void){
-    return this->main.getVInterfaceDTO().getWindowingTime3();
-}
-float Core::getGaborFilterTime(void){
-    return this->main.getVInterfaceDTO().getGaborFilterTime3();
-}
-float Core::getBinarizationTime(void){
-    return this->main.getVInterfaceDTO().getBinarizationTime3();
-}
-float Core::getMinutiaeExtractionTime(void){
-    return this->main.getVInterfaceDTO().getMinutiaeExtractionTime3();
-}
 float Core::getMatchingTime31(void){
     return this->main.getVInterfaceDTO().getMatchingTime31();
 }
