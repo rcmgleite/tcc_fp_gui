@@ -30,11 +30,6 @@ public:
     Q_INVOKABLE void initalScreenRequest();
     Q_INVOKABLE void stagesScreenRequest();
 
-    Q_INVOKABLE float getWindowingTime(void);
-    Q_INVOKABLE float getGaborFilterTime(void);
-    Q_INVOKABLE float getBinarizationTime(void);
-    Q_INVOKABLE float getMinutiaeExtractionTime(void);
-    Q_INVOKABLE float getMatchingTime(void);
     Q_INVOKABLE bool getAccepted1(void);
     Q_INVOKABLE bool getAccepted2(void);
     Q_INVOKABLE bool getAccepted31(void);

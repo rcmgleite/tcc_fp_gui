@@ -312,7 +312,7 @@ Rectangle {
        anchors.leftMargin: -10
        width: 1
        height: 120
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
    }
 
    Image {
@@ -323,7 +323,7 @@ Rectangle {
        anchors.leftMargin: -10
        width: 1
        height: 120
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
    }
 
    Image {
@@ -334,7 +334,7 @@ Rectangle {
        anchors.leftMargin: -10
        width: 1
        height: 120
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
    }
 
    //horizontal serarators
@@ -345,7 +345,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -355,7 +355,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -365,7 +365,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -375,7 +375,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -385,7 +385,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
    Image {
@@ -395,7 +395,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
    }
 
 }

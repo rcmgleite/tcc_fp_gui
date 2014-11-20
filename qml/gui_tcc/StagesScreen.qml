@@ -99,7 +99,7 @@ Rectangle {
                 anchors.topMargin: 10
                 width: 230
                 height: 230
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/original.tif"
                 cache: false
             }
 
@@ -116,7 +116,7 @@ Rectangle {
                 anchors.right: parent.right
                 width: 1
                 height: 408
-                source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
             }
 
         }
@@ -146,7 +146,7 @@ Rectangle {
                 anchors.topMargin: 10
                 width: 230
                 height: 230
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/original.tif"
                 cache: false
             }
 
@@ -165,7 +165,7 @@ Rectangle {
                 anchors.right: parent.right
                 width: 1
                 height: 408
-                source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
             }
         }
 
@@ -194,7 +194,7 @@ Rectangle {
                 anchors.topMargin: 10
                 width: 230
                 height: 230
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/original.tif"
                 cache: false
             }
 
@@ -215,7 +215,7 @@ Rectangle {
             anchors.leftMargin: 10
             width: 1050
             height: 1
-            source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+            source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
         }
     }
 
@@ -318,12 +318,12 @@ Rectangle {
 
             PropertyChanges {
                 target: withPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/whiteborder23.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/whiteborder23.tif"
             }
 
             PropertyChanges {
                 target: withPreWithAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/whiteborder23.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/whiteborder23.tif"
             }
 
             PropertyChanges {
@@ -388,12 +388,12 @@ Rectangle {
 
             PropertyChanges {
                 target: withPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/equalized2.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/equalized2.tif"
             }
 
             PropertyChanges {
                 target: withPreWithAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/equalized3.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/equalized3.tif"
             }
 
             PropertyChanges {
@@ -453,12 +453,12 @@ Rectangle {
 
             PropertyChanges {
                 target: withPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/equalized2.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/equalized2.tif"
             }
 
             PropertyChanges {
                 target: withPreWithAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/gabor3.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/gabor3.tif"
             }
 
             PropertyChanges {
@@ -477,12 +477,12 @@ Rectangle {
 
             PropertyChanges {
                 target: withPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/binarized2.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/binarized2.tif"
             }
 
             PropertyChanges {
                 target: withPreWithAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/binarized3.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/binarized3.tif"
             }
 
             PropertyChanges {
@@ -501,17 +501,17 @@ Rectangle {
 
             PropertyChanges {
                 target: noPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/minutiae1.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/minutiae1.tif"
             }
 
             PropertyChanges {
                 target: withPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/minutiae2.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/minutiae2.tif"
             }
 
             PropertyChanges {
                 target: withPreWithAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/minutiae3.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/minutiae3.tif"
             }
 
             PropertyChanges {
@@ -535,17 +535,17 @@ Rectangle {
 
             PropertyChanges {
                 target: noPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/minutiae1.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/minutiae1.tif"
             }
 
             PropertyChanges {
                 target: withPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/minutiae2.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/minutiae2.tif"
             }
 
             PropertyChanges {
                 target: withPreWithAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/minutiae3.tif"
+                source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/minutiae3.tif"
             }
 
 
