@@ -51,6 +51,14 @@ public:
     Q_INVOKABLE void algorithmScreenRequest();
     Q_INVOKABLE void stagesScreenRequest();
 
+    //STATES
+    Q_INVOKABLE void windowingStepRequest();
+    Q_INVOKABLE void equalizationStepRequest();
+    Q_INVOKABLE void gaborStepRequest();
+    Q_INVOKABLE void binarizationStepRequest();
+    Q_INVOKABLE void minutiaExtractionStepRequest();
+    Q_INVOKABLE void matchingStepRequest();
+
     Q_INVOKABLE bool getAccepted1(void);
     Q_INVOKABLE bool getAccepted2(void);
     Q_INVOKABLE bool getAccepted31(void);

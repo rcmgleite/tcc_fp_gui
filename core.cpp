@@ -25,6 +25,27 @@ void Core::stagesScreenRequest(){
     emit signalStagesScreenRequest();
 }
 
+void Core::windowingStepRequest(){
+    emit signalWindowingStepRequest();
+}
+
+void Core::equalizationStepRequest(){
+    emit signalEqualizationStepRequest();
+}
+void Core::gaborStepRequest(){
+    emit signalGaborStepRequest();
+}
+void Core::binarizationStepRequest(){
+    emit signalBinarizationStepRequest();
+}
+void Core::minutiaExtractionStepRequest(){
+    emit signalMinutiaExtractionStepRequest();
+}
+void Core::matchingStepRequest(){
+    emit signalMatchingStepRequest();
+}
+
+
 float Core::getMatchingTime31(void){
     return this->main.getVInterfaceDTO().getMatchingTime31();
 }
