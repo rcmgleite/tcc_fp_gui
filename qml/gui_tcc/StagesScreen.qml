@@ -101,6 +101,14 @@ Rectangle {
                 height: 230
                 source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif"
                 cache: false
+                MouseArea {
+                    id: mouseAreaNoPreNoAdaptImage
+                    anchors.fill: parent
+                    enabled: true
+                    onPressed: {
+                        core.showImage(noPreNoAdaptImage.source);
+                    }
+                }
             }
 
             Table5x1{
@@ -148,6 +156,14 @@ Rectangle {
                 height: 230
                 source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif"
                 cache: false
+                MouseArea {
+                    id: mouseAreaWithPreNoAdaptImage
+                    anchors.fill: parent
+                    enabled: true
+                    onPressed: {
+                        core.showImage(withPreNoAdaptImage.source);
+                    }
+                }
             }
 
             Table5x1{
@@ -196,6 +212,14 @@ Rectangle {
                 height: 230
                 source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif"
                 cache: false
+                MouseArea {
+                    id: mouseAreaWithPreWithAdaptImage
+                    anchors.fill: parent
+                    enabled: true
+                    onPressed: {
+                        core.showImage(withPreWithAdaptImage.source);
+                    }
+                }
             }
 
             Table5x3 {

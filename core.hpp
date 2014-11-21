@@ -45,6 +45,8 @@ public:
     /*
     *   Todo o método C++ que vai ser chamado no QML tem q ser Q_INVOKABLE
     */
+    Q_INVOKABLE void showImage(QString path);
+
     Q_INVOKABLE void execute();
     //SCREENS
     Q_INVOKABLE void metricsScreenRequest();

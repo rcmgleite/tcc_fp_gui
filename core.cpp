@@ -4,6 +4,12 @@
 
 using namespace std;
 
+void Core::showImage(QString path){
+//    this->main.showImage(path);
+    //TODO
+    cout << "imagePath: " << path.toStdString() << endl;
+}
+
 void Core::execute(){
     this->main.execute(this, "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif");
     this->callback();
