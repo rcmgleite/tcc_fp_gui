@@ -1,10 +1,27 @@
 #include<iostream>
 #include "core.hpp"
+#include "ConverterHelper.hpp"
 
 using namespace std;
 
+void Core::showImage(QString path){
+
+//    FUNÇAO QUE DEVE SER CRIADA NO ECLIPSE:
+//    void showImage (string path){
+//        Mat image = imread(path, CV_LOAD_IMAGE_GRAYSCALE);
+//        namedWindow( "Selected Image", WINDOW_AUTOSIZE ); // Create a window to display image
+//        imshow( "Selected Image", image ); // Show the image inside it
+//    }
+//
+//    TODOS'S:
+//      1) Copiar a funcao para o eclipse.
+//      2) Descomentar a funcao abaixo e apagar o cout.
+//    this->main.showImage(path);
+    cout << "imagePath: " << path.toStdString() << endl;
+}
+
 void Core::execute(){
-    this->main.execute(this, "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif");
+    this->main.execute(this, "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif");
     this->callback();
 }
 
@@ -25,14 +42,35 @@ void Core::stagesScreenRequest(){
     emit signalStagesScreenRequest();
 }
 
-float Core::getMatchingTime31(void){
-    return this->main.getVInterfaceDTO().getMatchingTime31();
+void Core::windowingStepRequest(){
+    emit signalWindowingStepRequest();
 }
-float Core::getMatchingTime32(void){
-    return this->main.getVInterfaceDTO().getMatchingTime32();
+
+void Core::equalizationStepRequest(){
+    emit signalEqualizationStepRequest();
 }
-float Core::getMatchingTime33(void){
-    return this->main.getVInterfaceDTO().getMatchingTime33();
+void Core::gaborStepRequest(){
+    emit signalGaborStepRequest();
+}
+void Core::binarizationStepRequest(){
+    emit signalBinarizationStepRequest();
+}
+void Core::minutiaExtractionStepRequest(){
+    emit signalMinutiaExtractionStepRequest();
+}
+void Core::matchingStepRequest(){
+    emit signalMatchingStepRequest();
+}
+
+
+QString Core::getMatchingTime31(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getMatchingTime31(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
+}
+QString Core::getMatchingTime32(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getMatchingTime32(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
+}
+QString Core::getMatchingTime33(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getMatchingTime33(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
 bool Core::getAccepted1(void){
     return this->main.getVInterfaceDTO().getAccepted1();
@@ -50,64 +88,64 @@ bool Core::getAccepted33(void){
     return this->main.getVInterfaceDTO().getAccepted33();
 }
 
-float Core::getMatchingTime1(void){
-    return this->main.getVInterfaceDTO().getMatchingTime1();
+QString Core::getMatchingTime1(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getMatchingTime1(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
 
-float Core::getMinutiaeExtractionTime1(void){
-    return this->main.getVInterfaceDTO().getMinutiaeExtractionTime1();
+QString Core::getMinutiaeExtractionTime1(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getMinutiaeExtractionTime1(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
 
-float Core::getMinutiaeExtractionTime2(void){
-    return this->main.getVInterfaceDTO().getMinutiaeExtractionTime2();
+QString Core::getMinutiaeExtractionTime2(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getMinutiaeExtractionTime2(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
 
-float Core::getMatchingTime2(void){
-    return this->main.getVInterfaceDTO().getMatchingTime2();
+QString Core::getMatchingTime2(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getMatchingTime2(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
 
-float Core::getEqualizationTime2(void){
-    return this->main.getVInterfaceDTO().getEqualizationTime2();
+QString Core::getEqualizationTime2(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getEqualizationTime2(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
 
-float Core::getBinarizationTime2(void){
-    return this->main.getVInterfaceDTO().getBinarizationTime2();
+QString Core::getBinarizationTime2(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getBinarizationTime2(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
 
-float Core::getMinutiaeExtractionTime3(void){
-    return this->main.getVInterfaceDTO().getMinutiaeExtractionTime3();
+QString Core::getMinutiaeExtractionTime3(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getMinutiaeExtractionTime3(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
-float Core::getWindowingTime3(void){
-    return this->main.getVInterfaceDTO().getWindowingTime3();
+QString Core::getWindowingTime3(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getWindowingTime3(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
-float Core::getEqualizationTime3(void){
-    return this->main.getVInterfaceDTO().getEqualizationTime3();
+QString Core::getEqualizationTime3(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getEqualizationTime3(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
-float Core::getGaborFilterTime3(void){
-    return this->main.getVInterfaceDTO().getGaborFilterTime3();
+QString Core::getGaborFilterTime3(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getGaborFilterTime3(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
-float Core::getBinarizationTime3(void){
-    return this->main.getVInterfaceDTO().getBinarizationTime3();
-}
-
-float Core::getTotalTime1(void){
-    return this->main.getVInterfaceDTO().getTotalTime1();
+QString Core::getBinarizationTime3(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getBinarizationTime3(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
 
-float Core::getTotalTime2(void){
-    return this->main.getVInterfaceDTO().getTotalTime2();
+QString Core::getTotalTime1(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTotalTime1(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
 
-float Core::getTotalTime31(void){
-    return this->main.getVInterfaceDTO().getTotalTime31();
+QString Core::getTotalTime2(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTotalTime2(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
 
-float Core::getTotalTime32(void){
-    return this->main.getVInterfaceDTO().getTotalTime32();
+QString Core::getTotalTime31(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTotalTime31(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
 
-float Core::getTotalTime33(void){
-    return this->main.getVInterfaceDTO().getTotalTime33();
+QString Core::getTotalTime32(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTotalTime32(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
+}
+
+QString Core::getTotalTime33(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTotalTime33(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
 
 int Core::getMinutiaeQuantity1(void){
@@ -122,96 +160,118 @@ int Core::getMinutiaeQuantity3(void){
     return this->main.getVInterfaceDTO().getMinutiaeQuantity3();
 }
 
-float Core::getMinutiaeQuality1(void){
-    return this->main.getVInterfaceDTO().getMinutiaeQuality1();
+QString Core::getMinutiaeQuality1(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getMinutiaeQuality1(), 2);
 }
 
-float Core::getMinutiaeQuality2(void){
-    return this->main.getVInterfaceDTO().getMinutiaeQuality2();
+QString Core::getMinutiaeQuality2(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getMinutiaeQuality2(), 2);
+//    return this->main.getVInterfaceDTO().getMinutiaeQuality2();
 }
 
-float Core::getMinutiaeQuality3(void){
-    return this->main.getVInterfaceDTO().getMinutiaeQuality3();
+QString Core::getMinutiaeQuality3(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getMinutiaeQuality3(), 2);
+//    return this->main.getVInterfaceDTO().getMinutiaeQuality3();
 }
 
-float Core::getFar1(void){
-    return this->main.getVInterfaceDTO().getFar1();
+QString Core::getFar1(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getFar1(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getFar1();
 }
 
-float Core::getFar2(void){
-    return this->main.getVInterfaceDTO().getFar2();
+QString Core::getFar2(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getFar2(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getFar2();
 }
 
-float Core::getFar31(void){
-    return this->main.getVInterfaceDTO().getFar31();
+QString Core::getFar31(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getFar31(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getFar31();
 }
 
-float Core::getFar32(void){
-    return this->main.getVInterfaceDTO().getFar32();
+QString Core::getFar32(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getFar32(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getFar32();
 }
 
-float Core::getFar33(void){
-    return this->main.getVInterfaceDTO().getFar33();
+QString Core::getFar33(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getFar33(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getFar33();
 }
 
-float Core::getFrr1(void){
-    return this->main.getVInterfaceDTO().getFrr1();
+QString Core::getFrr1(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getFrr1(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getFrr1();
 }
 
-float Core::getFrr2(void){
-    return this->main.getVInterfaceDTO().getFrr2();
+QString Core::getFrr2(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getFrr2(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getFrr2();
 }
 
-float Core::getFrr31(void){
-    return this->main.getVInterfaceDTO().getFrr31();
+QString Core::getFrr31(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getFrr31(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getFrr31();
 }
 
-float Core::getFrr32(void){
-    return this->main.getVInterfaceDTO().getFrr32();
+QString Core::getFrr32(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getFrr32(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getFrr32();
 }
 
-float Core::getFrr33(void){
-    return this->main.getVInterfaceDTO().getFrr33();
+QString Core::getFrr33(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getFrr33(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getFrr33();
 }
 
-float Core::getTar1(void){
-    return this->main.getVInterfaceDTO().getTar1();
+QString Core::getTar1(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTar1(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getTar1();
 }
 
-float Core::getTar2(void){
-    return this->main.getVInterfaceDTO().getTar2();
+QString Core::getTar2(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTar2(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getTar2();
 }
 
-float Core::getTar31(void){
-    return this->main.getVInterfaceDTO().getTar31();
+QString Core::getTar31(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTar31(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getTar31();
 }
 
-float Core::getTar32(void){
-    return this->main.getVInterfaceDTO().getTar32();
+QString Core::getTar32(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTar32(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getTar32();
 }
 
-float Core::getTar33(void){
-    return this->main.getVInterfaceDTO().getTar33();
+QString Core::getTar33(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTar33(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getTar33();
 }
 
-float Core::getTrr1(void){
-    return this->main.getVInterfaceDTO().getTrr1();
+QString Core::getTrr1(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTrr1(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getTrr1();
 }
 
-float Core::getTrr2(void){
-    return this->main.getVInterfaceDTO().getTrr2();
+QString Core::getTrr2(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTrr2(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getTrr2();
 }
 
-float Core::getTrr31(void){
-    return this->main.getVInterfaceDTO().getTrr31();
+QString Core::getTrr31(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTrr31(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getTrr31();
 }
 
-float Core::getTrr32(void){
-    return this->main.getVInterfaceDTO().getTrr32();
+QString Core::getTrr32(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTrr32(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getTrr32();
 }
 
-float Core::getTrr33(void){
-    return this->main.getVInterfaceDTO().getTrr33();
+QString Core::getTrr33(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTrr33(), 2, ConverterHelper::NONE, ConverterHelper::PERCENTAGE);
+//    return this->main.getVInterfaceDTO().getTrr33();
 }
 
 void Core::callback(void){

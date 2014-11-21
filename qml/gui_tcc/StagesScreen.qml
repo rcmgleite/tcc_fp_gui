@@ -99,8 +99,16 @@ Rectangle {
                 anchors.topMargin: 10
                 width: 230
                 height: 230
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif"
                 cache: false
+                MouseArea {
+                    id: mouseAreaNoPreNoAdaptImage
+                    anchors.fill: parent
+                    enabled: true
+                    onPressed: {
+                        core.showImage(noPreNoAdaptImage.source);
+                    }
+                }
             }
 
             Table5x1{
@@ -116,7 +124,7 @@ Rectangle {
                 anchors.right: parent.right
                 width: 1
                 height: 408
-                source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_vertical_limit.png"
             }
 
         }
@@ -146,8 +154,16 @@ Rectangle {
                 anchors.topMargin: 10
                 width: 230
                 height: 230
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif"
                 cache: false
+                MouseArea {
+                    id: mouseAreaWithPreNoAdaptImage
+                    anchors.fill: parent
+                    enabled: true
+                    onPressed: {
+                        core.showImage(withPreNoAdaptImage.source);
+                    }
+                }
             }
 
             Table5x1{
@@ -165,7 +181,7 @@ Rectangle {
                 anchors.right: parent.right
                 width: 1
                 height: 408
-                source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_vertical_limit.png"
             }
         }
 
@@ -194,8 +210,16 @@ Rectangle {
                 anchors.topMargin: 10
                 width: 230
                 height: 230
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif"
                 cache: false
+                MouseArea {
+                    id: mouseAreaWithPreWithAdaptImage
+                    anchors.fill: parent
+                    enabled: true
+                    onPressed: {
+                        core.showImage(withPreWithAdaptImage.source);
+                    }
+                }
             }
 
             Table5x3 {
@@ -215,7 +239,7 @@ Rectangle {
             anchors.leftMargin: 10
             width: 1050
             height: 1
-            source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+            source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_separator.png"
         }
     }
 
@@ -293,7 +317,6 @@ Rectangle {
     states: [
         State{
             name: "default"
-
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Não executado"
@@ -311,6 +334,10 @@ Rectangle {
 
         State{
             name: "windowing"
+            onCompleted: {
+                core.setCurrState(stagesScreen.state)
+            }
+
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Janelamento"
@@ -318,12 +345,12 @@ Rectangle {
 
             PropertyChanges {
                 target: withPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/whiteborder23.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/whiteborder23.tif"
             }
 
             PropertyChanges {
                 target: withPreWithAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/whiteborder23.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/whiteborder23.tif"
             }
 
             PropertyChanges {
@@ -381,6 +408,9 @@ Rectangle {
 
         State{
             name: "equalization"
+            onCompleted: {
+                core.setCurrState(stagesScreen.state)
+            }
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Normalização"
@@ -388,12 +418,12 @@ Rectangle {
 
             PropertyChanges {
                 target: withPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/equalized2.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/equalized2.tif"
             }
 
             PropertyChanges {
                 target: withPreWithAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/equalized3.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/equalized3.tif"
             }
 
             PropertyChanges {
@@ -446,6 +476,9 @@ Rectangle {
 
         State{
             name: "gabor"
+            onCompleted: {
+                core.setCurrState(stagesScreen.state)
+            }
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Filtro de gabor"
@@ -453,12 +486,12 @@ Rectangle {
 
             PropertyChanges {
                 target: withPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/equalized2.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/equalized2.tif"
             }
 
             PropertyChanges {
                 target: withPreWithAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/gabor3.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/gabor3.tif"
             }
 
             PropertyChanges {
@@ -504,6 +537,9 @@ Rectangle {
 
         State{
             name: "binarization"
+            onCompleted: {
+                core.setCurrState(stagesScreen.state)
+            }
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Binarização"
@@ -511,12 +547,12 @@ Rectangle {
 
             PropertyChanges {
                 target: withPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/binarized2.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/binarized2.tif"
             }
 
             PropertyChanges {
                 target: withPreWithAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/binarized3.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/binarized3.tif"
             }
 
             PropertyChanges {
@@ -562,6 +598,9 @@ Rectangle {
 
         State{
             name: "minutiaExtraction"
+            onCompleted: {
+                core.setCurrState(stagesScreen.state)
+            }
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Extração de minúcias"
@@ -569,17 +608,17 @@ Rectangle {
 
             PropertyChanges {
                 target: noPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/minutiae1.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/minutiae1.tif"
             }
 
             PropertyChanges {
                 target: withPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/minutiae2.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/minutiae2.tif"
             }
 
             PropertyChanges {
                 target: withPreWithAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/minutiae3.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/minutiae3.tif"
             }
 
             PropertyChanges {
@@ -630,6 +669,9 @@ Rectangle {
 
         State{
             name: "matching"
+            onCompleted: {
+                core.setCurrState(stagesScreen.state)
+            }
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Matching"
@@ -637,17 +679,17 @@ Rectangle {
 
             PropertyChanges {
                 target: noPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/minutiae1.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/minutiae1.tif"
             }
 
             PropertyChanges {
                 target: withPreNoAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/minutiae2.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/minutiae2.tif"
             }
 
             PropertyChanges {
                 target: withPreWithAdaptImage
-                source: "/home/priscila/tcc_fp_gui/resources/images/fingerprints/minutiae3.tif"
+                source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/minutiae3.tif"
             }
 
 
@@ -702,6 +744,7 @@ Rectangle {
     }
 
 
+
     Connections {
         target: core
         onExecutionComplete: {
@@ -727,7 +770,5 @@ Rectangle {
         onSignalMatchingStepRequest: {
             stagesScreen.state = "matching"
         }
-
-
     }
 }
