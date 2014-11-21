@@ -5,8 +5,18 @@
 using namespace std;
 
 void Core::showImage(QString path){
+
+//    FUNÇAO QUE DEVE SER CRIADA NO ECLIPSE:
+//    void showImage (string path){
+//        Mat image = imread(path, CV_LOAD_IMAGE_GRAYSCALE);
+//        namedWindow( "Selected Image", WINDOW_AUTOSIZE ); // Create a window to display image
+//        imshow( "Selected Image", image ); // Show the image inside it
+//    }
+//
+//    TODOS'S:
+//      1) Copiar a funcao para o eclipse.
+//      2) Descomentar a funcao abaixo e apagar o cout.
 //    this->main.showImage(path);
-    //TODO
     cout << "imagePath: " << path.toStdString() << endl;
 }
 
