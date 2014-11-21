@@ -7,7 +7,7 @@ Rectangle {
     height: 125
     color: "transparent"
 
-    property string imgPath: '/home/fernanda/workspace/c/tcc_fp_gui/resources/images/' + inputImagePath.text
+    property string imgPath: '/home/priscila/tcc_fp_gui/resources/images/' + inputImagePath.text
 
     Rectangle{
         color: "transparent"
@@ -83,7 +83,7 @@ Rectangle {
             anchors.leftMargin: 10
             width: 1050
             height: 1
-            source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
+            source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
         }
     }
 

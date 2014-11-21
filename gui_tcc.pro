@@ -27,9 +27,9 @@ OTHER_FILES += \
 
 
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../tcc_fp/Debug/release/ -ltcc_fp
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../tcc_fp/Debug/debug/ -ltcc_fp
-else:unix: LIBS += -L$$PWD/../tcc_fp/Debug/ -ltcc_fp
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../tcc_fp/Debug/release/ -lTCC\ FP
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../tcc_fp/Debug/debug/ -lTCC\ FP
+else:unix: LIBS += -L$$PWD/../tcc_fp/Debug/ -lTCC\ FP
 
 INCLUDEPATH += $$PWD/../tcc_fp/src
 DEPENDPATH += $$PWD/../tcc_fp/Debug

@@ -89,6 +89,30 @@ public:
     Q_INVOKABLE float getMinutiaeQuality2(void);
     Q_INVOKABLE float getMinutiaeQuality3(void);
 
+    Q_INVOKABLE float getFar1(void);
+    Q_INVOKABLE float getFar2(void);
+    Q_INVOKABLE float getFar31(void);
+    Q_INVOKABLE float getFar32(void);
+    Q_INVOKABLE float getFar33(void);
+
+    Q_INVOKABLE float getFrr1(void);
+    Q_INVOKABLE float getFrr2(void);
+    Q_INVOKABLE float getFrr31(void);
+    Q_INVOKABLE float getFrr32(void);
+    Q_INVOKABLE float getFrr33(void);
+
+    Q_INVOKABLE float getTar1(void);
+    Q_INVOKABLE float getTar2(void);
+    Q_INVOKABLE float getTar31(void);
+    Q_INVOKABLE float getTar32(void);
+    Q_INVOKABLE float getTar33(void);
+
+    Q_INVOKABLE float getTrr1(void);
+    Q_INVOKABLE float getTrr2(void);
+    Q_INVOKABLE float getTrr31(void);
+    Q_INVOKABLE float getTrr32(void);
+    Q_INVOKABLE float getTrr33(void);
+
 signals:
     void executionComplete();
     void signalMetricsScreenRequest();

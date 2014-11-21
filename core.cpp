@@ -4,7 +4,7 @@
 using namespace std;
 
 void Core::execute(){
-    //this->main.execute(this, "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/original.tif");
+    this->main.execute(this, "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif");
     this->callback();
 }
 
@@ -13,6 +13,7 @@ void Core::setFeedback(bool feedback){
 }
 
 void Core::metricsScreenRequest(){
+    this->main.getMetrics(this);
     emit signalMetricsScreenRequest();
 }
 
@@ -131,6 +132,86 @@ float Core::getMinutiaeQuality2(void){
 
 float Core::getMinutiaeQuality3(void){
     return this->main.getVInterfaceDTO().getMinutiaeQuality3();
+}
+
+float Core::getFar1(void){
+    return this->main.getVInterfaceDTO().getFar1();
+}
+
+float Core::getFar2(void){
+    return this->main.getVInterfaceDTO().getFar2();
+}
+
+float Core::getFar31(void){
+    return this->main.getVInterfaceDTO().getFar31();
+}
+
+float Core::getFar32(void){
+    return this->main.getVInterfaceDTO().getFar32();
+}
+
+float Core::getFar33(void){
+    return this->main.getVInterfaceDTO().getFar33();
+}
+
+float Core::getFrr1(void){
+    return this->main.getVInterfaceDTO().getFrr1();
+}
+
+float Core::getFrr2(void){
+    return this->main.getVInterfaceDTO().getFrr2();
+}
+
+float Core::getFrr31(void){
+    return this->main.getVInterfaceDTO().getFrr31();
+}
+
+float Core::getFrr32(void){
+    return this->main.getVInterfaceDTO().getFrr32();
+}
+
+float Core::getFrr33(void){
+    return this->main.getVInterfaceDTO().getFrr33();
+}
+
+float Core::getTar1(void){
+    return this->main.getVInterfaceDTO().getTar1();
+}
+
+float Core::getTar2(void){
+    return this->main.getVInterfaceDTO().getTar2();
+}
+
+float Core::getTar31(void){
+    return this->main.getVInterfaceDTO().getTar31();
+}
+
+float Core::getTar32(void){
+    return this->main.getVInterfaceDTO().getTar32();
+}
+
+float Core::getTar33(void){
+    return this->main.getVInterfaceDTO().getTar33();
+}
+
+float Core::getTrr1(void){
+    return this->main.getVInterfaceDTO().getTrr1();
+}
+
+float Core::getTrr2(void){
+    return this->main.getVInterfaceDTO().getTrr2();
+}
+
+float Core::getTrr31(void){
+    return this->main.getVInterfaceDTO().getTrr31();
+}
+
+float Core::getTrr32(void){
+    return this->main.getVInterfaceDTO().getTrr32();
+}
+
+float Core::getTrr33(void){
+    return this->main.getVInterfaceDTO().getTrr33();
 }
 
 void Core::callback(void){
