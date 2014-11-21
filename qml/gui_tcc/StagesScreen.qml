@@ -293,7 +293,6 @@ Rectangle {
     states: [
         State{
             name: "default"
-
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Não executado"
@@ -311,6 +310,10 @@ Rectangle {
 
         State{
             name: "windowing"
+            onCompleted: {
+                core.setCurrState(stagesScreen.state)
+            }
+
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Janelamento"
@@ -381,6 +384,9 @@ Rectangle {
 
         State{
             name: "equalization"
+            onCompleted: {
+                core.setCurrState(stagesScreen.state)
+            }
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Normalização"
@@ -446,6 +452,9 @@ Rectangle {
 
         State{
             name: "gabor"
+            onCompleted: {
+                core.setCurrState(stagesScreen.state)
+            }
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Filtro de gabor"
@@ -504,6 +513,9 @@ Rectangle {
 
         State{
             name: "binarization"
+            onCompleted: {
+                core.setCurrState(stagesScreen.state)
+            }
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Binarização"
@@ -562,6 +574,9 @@ Rectangle {
 
         State{
             name: "minutiaExtraction"
+            onCompleted: {
+                core.setCurrState(stagesScreen.state)
+            }
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Extração de minúcias"
@@ -630,6 +645,9 @@ Rectangle {
 
         State{
             name: "matching"
+            onCompleted: {
+                core.setCurrState(stagesScreen.state)
+            }
             PropertyChanges {
                 target: stageName
                 text: "Etapa: Matching"
@@ -702,6 +720,7 @@ Rectangle {
     }
 
 
+
     Connections {
         target: core
         onExecutionComplete: {
@@ -727,7 +746,5 @@ Rectangle {
         onSignalMatchingStepRequest: {
             stagesScreen.state = "matching"
         }
-
-
     }
 }
