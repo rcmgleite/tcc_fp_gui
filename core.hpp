@@ -67,59 +67,59 @@ public:
     Q_INVOKABLE void setFeedback(bool feedback);
 
 
-    Q_INVOKABLE float getMatchingTime1(void);
-    Q_INVOKABLE float getMinutiaeExtractionTime1(void);
-    Q_INVOKABLE float getMinutiaeExtractionTime2(void);
-    Q_INVOKABLE float getMatchingTime2(void);
-    Q_INVOKABLE float getEqualizationTime2(void);
-    Q_INVOKABLE float getBinarizationTime2(void);
+    Q_INVOKABLE QString getMatchingTime1(void);
+    Q_INVOKABLE QString getMinutiaeExtractionTime1(void);
+    Q_INVOKABLE QString getMinutiaeExtractionTime2(void);
+    Q_INVOKABLE QString getMatchingTime2(void);
+    Q_INVOKABLE QString getEqualizationTime2(void);
+    Q_INVOKABLE QString getBinarizationTime2(void);
 
-    Q_INVOKABLE float getMinutiaeExtractionTime3(void);
-    Q_INVOKABLE float getMatchingTime31(void);
-    Q_INVOKABLE float getMatchingTime32(void);
-    Q_INVOKABLE float getMatchingTime33(void);
-    Q_INVOKABLE float getWindowingTime3(void);
-    Q_INVOKABLE float getEqualizationTime3(void);
-    Q_INVOKABLE float getGaborFilterTime3(void);
-    Q_INVOKABLE float getBinarizationTime3(void);
+    Q_INVOKABLE QString getMinutiaeExtractionTime3(void);
+    Q_INVOKABLE QString getMatchingTime31(void);
+    Q_INVOKABLE QString getMatchingTime32(void);
+    Q_INVOKABLE QString getMatchingTime33(void);
+    Q_INVOKABLE QString getWindowingTime3(void);
+    Q_INVOKABLE QString getEqualizationTime3(void);
+    Q_INVOKABLE QString getGaborFilterTime3(void);
+    Q_INVOKABLE QString getBinarizationTime3(void);
 
-    Q_INVOKABLE float getTotalTime1(void);
-    Q_INVOKABLE float getTotalTime2(void);
-    Q_INVOKABLE float getTotalTime31(void);
-    Q_INVOKABLE float getTotalTime32(void);
-    Q_INVOKABLE float getTotalTime33(void);
+    Q_INVOKABLE QString getTotalTime1(void);
+    Q_INVOKABLE QString getTotalTime2(void);
+    Q_INVOKABLE QString getTotalTime31(void);
+    Q_INVOKABLE QString getTotalTime32(void);
+    Q_INVOKABLE QString getTotalTime33(void);
 
     Q_INVOKABLE int getMinutiaeQuantity1(void);
     Q_INVOKABLE int getMinutiaeQuantity2(void);
     Q_INVOKABLE int getMinutiaeQuantity3(void);
 
-    Q_INVOKABLE float getMinutiaeQuality1(void);
-    Q_INVOKABLE float getMinutiaeQuality2(void);
-    Q_INVOKABLE float getMinutiaeQuality3(void);
+    Q_INVOKABLE QString getMinutiaeQuality1(void);
+    Q_INVOKABLE QString getMinutiaeQuality2(void);
+    Q_INVOKABLE QString getMinutiaeQuality3(void);
 
-    Q_INVOKABLE float getFar1(void);
-    Q_INVOKABLE float getFar2(void);
-    Q_INVOKABLE float getFar31(void);
-    Q_INVOKABLE float getFar32(void);
-    Q_INVOKABLE float getFar33(void);
+    Q_INVOKABLE QString getFar1(void);
+    Q_INVOKABLE QString getFar2(void);
+    Q_INVOKABLE QString getFar31(void);
+    Q_INVOKABLE QString getFar32(void);
+    Q_INVOKABLE QString getFar33(void);
 
-    Q_INVOKABLE float getFrr1(void);
-    Q_INVOKABLE float getFrr2(void);
-    Q_INVOKABLE float getFrr31(void);
-    Q_INVOKABLE float getFrr32(void);
-    Q_INVOKABLE float getFrr33(void);
+    Q_INVOKABLE QString getFrr1(void);
+    Q_INVOKABLE QString getFrr2(void);
+    Q_INVOKABLE QString getFrr31(void);
+    Q_INVOKABLE QString getFrr32(void);
+    Q_INVOKABLE QString getFrr33(void);
 
-    Q_INVOKABLE float getTar1(void);
-    Q_INVOKABLE float getTar2(void);
-    Q_INVOKABLE float getTar31(void);
-    Q_INVOKABLE float getTar32(void);
-    Q_INVOKABLE float getTar33(void);
+    Q_INVOKABLE QString getTar1(void);
+    Q_INVOKABLE QString getTar2(void);
+    Q_INVOKABLE QString getTar31(void);
+    Q_INVOKABLE QString getTar32(void);
+    Q_INVOKABLE QString getTar33(void);
 
-    Q_INVOKABLE float getTrr1(void);
-    Q_INVOKABLE float getTrr2(void);
-    Q_INVOKABLE float getTrr31(void);
-    Q_INVOKABLE float getTrr32(void);
-    Q_INVOKABLE float getTrr33(void);
+    Q_INVOKABLE QString getTrr1(void);
+    Q_INVOKABLE QString getTrr2(void);
+    Q_INVOKABLE QString getTrr31(void);
+    Q_INVOKABLE QString getTrr32(void);
+    Q_INVOKABLE QString getTrr33(void);
 
 signals:
     void executionComplete();
