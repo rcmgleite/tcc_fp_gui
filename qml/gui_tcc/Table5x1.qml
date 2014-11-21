@@ -150,7 +150,7 @@ Rectangle {
        anchors.leftMargin: parent.width/3
        width: 1
        height: 100
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_vertical_limit.png"
+       source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_vertical_limit.png"
    }
 
 
@@ -162,7 +162,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_separator.png"
    }
 
    Image {
@@ -172,7 +172,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_separator.png"
    }
 
    Image {
@@ -182,7 +182,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_separator.png"
    }
 
    Image {
@@ -192,7 +192,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_separator.png"
    }
 
    Image {
@@ -202,7 +202,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_separator.png"
    }
 
    Image {
@@ -212,7 +212,7 @@ Rectangle {
        anchors.leftMargin: 0
        width: parent.width
        height: 1
-       source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+       source: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/list_separator.png"
    }
 
 }
