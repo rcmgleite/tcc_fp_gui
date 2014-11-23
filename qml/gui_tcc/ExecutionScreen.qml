@@ -7,7 +7,7 @@ Rectangle {
     height: 125
     color: "transparent"
 
-    property string imgPath: '/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images' + inputImagePath.text
+    property string imgPath: '/home/priscila/tcc_fp_gui/resources/images/' + inputImagePath.text
 
     Rectangle{
         color: "transparent"
@@ -114,7 +114,7 @@ Rectangle {
 //        wrapMode: TextEdit.Wrap
 //        color: "black"
 //        focus: true
-//        text: "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/no_image.png"
+//        text: "/home/priscila/tcc_fp_gui/resources/images/no_image.png"
 //    }
 
 //    Image {
