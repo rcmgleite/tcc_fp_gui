@@ -91,6 +91,12 @@ public:
     Q_INVOKABLE QString getTotalTime32(void);
     Q_INVOKABLE QString getTotalTime33(void);
 
+    Q_INVOKABLE QString getAvgTime1(void);
+    Q_INVOKABLE QString getAvgTime2(void);
+    Q_INVOKABLE QString getAvgTime31(void);
+    Q_INVOKABLE QString getAvgTime32(void);
+    Q_INVOKABLE QString getAvgTime33(void);
+
     Q_INVOKABLE int getMinutiaeQuantity1(void);
     Q_INVOKABLE int getMinutiaeQuantity2(void);
     Q_INVOKABLE int getMinutiaeQuantity3(void);

@@ -97,25 +97,30 @@ Rectangle{
         metricsTable.val2x1 = core.getFrr1()
         metricsTable.val3x1 = core.getTar1()
         metricsTable.val4x1 = core.getTrr1()
+        metricsTable.val5x1 = core.getAvgTime1()
 
         metricsTable.val1x2 = core.getFar2()
         metricsTable.val2x2 = core.getFrr2()
         metricsTable.val3x2 = core.getTar2()
         metricsTable.val4x2 = core.getTrr2()
+        metricsTable.val5x2 = core.getAvgTime2()
 
         metricsTable.val1x3 = core.getFar32()
         metricsTable.val2x3 = core.getFrr32()
         metricsTable.val3x3 = core.getTar32()
         metricsTable.val4x3 = core.getTrr32()
+        metricsTable.val5x3 = core.getAvgTime31()
 
         metricsTable.val1x4 = core.getFar31()
         metricsTable.val2x4 = core.getFrr31()
         metricsTable.val3x4 = core.getTar31()
         metricsTable.val4x4 = core.getTrr31()
+        metricsTable.val5x4 = core.getAvgTime32()
 
         metricsTable.val1x5 = core.getFar33()
         metricsTable.val2x5 = core.getFrr33()
         metricsTable.val3x5 = core.getTar33()
         metricsTable.val4x5 = core.getTrr33()
+        metricsTable.val5x5 = core.getAvgTime33()
     }
 }

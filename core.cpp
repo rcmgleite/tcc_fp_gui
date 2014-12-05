@@ -138,6 +138,26 @@ QString Core::getTotalTime33(void){
     return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getTotalTime33(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
 }
 
+QString Core::getAvgTime1(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getAvgTime1(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
+}
+
+QString Core::getAvgTime2(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getAvgTime2(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
+}
+
+QString Core::getAvgTime31(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getAvgTime31(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
+}
+
+QString Core::getAvgTime32(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getAvgTime32(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
+}
+
+QString Core::getAvgTime33(void){
+    return ConverterHelper::convertFloatValue(this->main.getVInterfaceDTO().getAvgTime33(), 2, ConverterHelper::SECONDS, ConverterHelper::MILLSECONDS) + " ms";
+}
+
 int Core::getMinutiaeQuantity1(void){
     return this->main.getVInterfaceDTO().getMinutiaeQuantity1();
 }
