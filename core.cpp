@@ -21,7 +21,7 @@ void Core::showImage(QString path){
 }
 
 void Core::execute(){
-    this->main.execute(this, "/home/rafael/Desktop/rafael/tcc_fe/gui_fe/gui_tcc/resources/images/fingerprints/original.tif");
+    this->main.execute(this, "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/original.tif");
     this->callback();
 }
 

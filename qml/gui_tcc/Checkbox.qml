@@ -18,12 +18,12 @@ Rectangle {
 
     function getImgSource() {
         if (checkSimbol === "X")
-            return "/home/priscila/tcc_fp_gui/resources/images/checkbox_unchecked.png"
+            return "/home/fernanda/workspace/c/tcc_fp_gui/resources/imagescheckbox_unchecked.png"
     }
 
     function getImgChecked() {
         if (checkSimbol === "X")
-            return "/home/priscila/tcc_fp_gui/resources/images/checkbox_checked.png"
+            return "/home/fernanda/workspace/c/tcc_fp_gui/resources/imagescheckbox_checked.png"
     }
 
 
