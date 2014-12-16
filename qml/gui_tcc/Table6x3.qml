@@ -7,55 +7,48 @@ Rectangle {
    color: "transparent"
 
    //Columns
-   property string columnLabel1: "Sistema 1"
-   property string columnLabel2: "Sistema 2"
-   property string columnLabel3: "Sistema 3 - Tolerante"
-   property string columnLabel4: "Sistema 3 - Padrão"
-   property string columnLabel5: "Sistema 3 - Rigoroso"
+   property string columnLabel1: "Tolerante"
+   property string columnLabel2: "Padrão"
+   property string columnLabel3: "Rigoroso"
 
    //Rows
-   property string rowLabel1: "% falta aceitação"
-   property string rowLabel2: "% falta rejeição"
-   property string rowLabel3: "% verdadeira aceitação"
-   property string rowLabel4: "% verdadeira rejeição"
-   property string rowLabel5: "Tempo médio"
+   property string rowLabel1: "Tempo etapa"
+   property string rowLabel2: "Resultado"
+   property string rowLabel3: "Tempo total"
+   property string rowLabel4: "Nº Minúcias"
+   property string rowLabel5: "Qualidade min"
+   property string rowLabel6: "Nota de corte"
 
    property string val1x1: ""
    property string val1x2: ""
    property string val1x3: ""
-   property string val1x4: ""
-   property string val1x5: ""
 
    property string val2x1: ""
    property string val2x2: ""
    property string val2x3: ""
-   property string val2x4: ""
-   property string val2x5: ""
 
    property string val3x1: ""
    property string val3x2: ""
    property string val3x3: ""
-   property string val3x4: ""
-   property string val3x5: ""
 
    property string val4x1: ""
    property string val4x2: ""
    property string val4x3: ""
-   property string val4x4: ""
-   property string val4x5: ""
 
    property string val5x1: ""
    property string val5x2: ""
    property string val5x3: ""
-   property string val5x4: ""
-   property string val5x5: ""
+
+   property string val6x1: ""
+   property string val6x2: ""
+   property string val6x3: ""
 
 
 //   property string cellWidth: "120"
 //   property string cellHeight: "20"
 
-    property string cellWidth: parent.width/7
-    property string cellHeight: "40"
+    property string cellWidth: "120"
+    property string cellHeight: "20"
 
    //row LABELS
    Text {
@@ -113,16 +106,27 @@ Rectangle {
        width: cellWidth
    }
 
+   Text {
+       id: txtRowLabel6
+       font.pointSize: 10
+       font.family: "OpenSans"
+       text: qsTr(rowLabel6)
+       anchors.top: txtRowLabel5.bottom
+       anchors.left: parent.left
+       height: cellHeight
+       width: cellWidth
+   }
+
    //Column LABELS
    Text {
        id: txtColumnLabel1
        font.pointSize: 10
        font.family: "OpenSans"
        text: qsTr(columnLabel1)
-       anchors.top: parent.top
-       anchors.left: txtVal11.left
+       anchors.left: txtRowLabel1.right
        height: cellHeight
        width: cellWidth
+
    }
 
    Text {
@@ -141,30 +145,8 @@ Rectangle {
        font.pointSize: 10
        font.family: "OpenSans"
        text: qsTr(columnLabel3)
+       anchors.top: parent.top
        anchors.left: txtColumnLabel2.right
-       height: cellHeight
-       width: cellWidth
-
-   }
-
-   Text {
-       id: txtColumnLabel4
-       font.pointSize: 10
-       font.family: "OpenSans"
-       text: qsTr(columnLabel4)
-       anchors.top: parent.top
-       anchors.left: txtColumnLabel3.right
-       height: cellHeight
-       width: cellWidth
-   }
-
-   Text {
-       id: txtColumnLabel5
-       font.pointSize: 10
-       font.family: "OpenSans"
-       text: qsTr(columnLabel5)
-       anchors.top: parent.top
-       anchors.left: txtColumnLabel4.right
        height: cellHeight
        width: cellWidth
    }
@@ -205,29 +187,6 @@ Rectangle {
    }
 
    Text {
-       id: txtVal14
-       font.pointSize: 10
-       font.family: "OpenSans"
-       text: qsTr(val1x4)
-       height: cellHeight
-       anchors.left: txtVal13.right
-       anchors.top: txtColumnLabel4.bottom
-       width: cellWidth
-   }
-
-   Text {
-       id: txtVal15
-       font.pointSize: 10
-       font.family: "OpenSans"
-       text: qsTr(val1x5)
-       height: cellHeight
-       anchors.left: txtVal14.right
-       anchors.top: txtColumnLabel4.bottom
-       width: cellWidth
-   }
-
-
-   Text {
        id: txtVal21
        font.pointSize: 10
        font.family: "OpenSans"
@@ -257,28 +216,6 @@ Rectangle {
        height: cellHeight
        anchors.left: txtVal22.right
        anchors.top: txtVal13.bottom
-       width: cellWidth
-   }
-
-   Text {
-       id: txtVal24
-       font.pointSize: 10
-       font.family: "OpenSans"
-       text: qsTr(val2x4)
-       height: cellHeight
-       anchors.left: txtVal23.right
-       anchors.top: txtVal14.bottom
-       width: cellWidth
-   }
-
-   Text {
-       id: txtVal25
-       font.pointSize: 10
-       font.family: "OpenSans"
-       text: qsTr(val2x5)
-       height: cellHeight
-       anchors.left: txtVal24.right
-       anchors.top: txtVal15.bottom
        width: cellWidth
    }
 
@@ -316,30 +253,6 @@ Rectangle {
    }
 
    Text {
-       id: txtVal34
-       font.pointSize: 10
-       font.family: "OpenSans"
-       text: qsTr(val3x4)
-       height: cellHeight
-       anchors.left: txtVal33.right
-       anchors.top: txtVal24.bottom
-       width: cellWidth
-   }
-
-
-   Text {
-       id: txtVal35
-       font.pointSize: 10
-       font.family: "OpenSans"
-       text: qsTr(val3x5)
-       height: cellHeight
-       anchors.left: txtVal34.right
-       anchors.top: txtVal25.bottom
-       width: cellWidth
-   }
-
-
-   Text {
        id: txtVal41
        font.pointSize: 10
        font.family: "OpenSans"
@@ -369,28 +282,6 @@ Rectangle {
        height: cellHeight
        anchors.left: txtVal42.right
        anchors.top: txtVal33.bottom
-       width: cellWidth
-   }
-
-   Text {
-       id: txtVal44
-       font.pointSize: 10
-       font.family: "OpenSans"
-       text: qsTr(val4x4)
-       height: cellHeight
-       anchors.left: txtVal43.right
-       anchors.top: txtVal34.bottom
-       width: cellWidth
-   }
-
-   Text {
-       id: txtVal45
-       font.pointSize: 10
-       font.family: "OpenSans"
-       text: qsTr(val4x5)
-       height: cellHeight
-       anchors.left: txtVal44.right
-       anchors.top: txtVal35.bottom
        width: cellWidth
    }
 
@@ -427,25 +318,37 @@ Rectangle {
        width: cellWidth
    }
 
+
    Text {
-       id: txtVal54
+       id: txtVal61
        font.pointSize: 10
        font.family: "OpenSans"
-       text: qsTr(val5x4)
+       text: qsTr(val6x1)
        height: cellHeight
-       anchors.left: txtVal53.right
-       anchors.top: txtVal44.bottom
+       anchors.left: txtRowLabel6.right
+       anchors.top: txtVal51.bottom
        width: cellWidth
    }
 
    Text {
-       id: txtVal55
+       id: txtVal62
        font.pointSize: 10
        font.family: "OpenSans"
-       text: qsTr(val5x5)
+       text: qsTr(val6x2)
        height: cellHeight
-       anchors.left: txtVal54.right
-       anchors.top: txtVal45.bottom
+       anchors.left: txtVal61.right
+       anchors.top: txtVal52.bottom
+       width: cellWidth
+   }
+
+   Text {
+       id: txtVal63
+       font.pointSize: 10
+       font.family: "OpenSans"
+       text: qsTr(val6x3)
+       height: cellHeight
+       anchors.left: txtVal62.right
+       anchors.top: txtVal53.bottom
        width: cellWidth
    }
 
@@ -458,7 +361,7 @@ Rectangle {
        anchors.left: txtColumnLabel1.left
        anchors.leftMargin: -10
        width: 1
-       height: 240
+       height: 140
        source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
    }
 
@@ -469,7 +372,7 @@ Rectangle {
        anchors.left: txtColumnLabel2.left
        anchors.leftMargin: -10
        width: 1
-       height: 240
+       height: 140
        source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
    }
 
@@ -480,29 +383,7 @@ Rectangle {
        anchors.left: txtColumnLabel3.left
        anchors.leftMargin: -10
        width: 1
-       height: 240
-       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
-   }
-
-   Image {
-       id: separetor4
-       anchors.top: parent.top
-       anchors.topMargin: 0
-       anchors.left: txtColumnLabel4.left
-       anchors.leftMargin: -10
-       width: 1
-       height: 240
-       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
-   }
-
-   Image {
-       id: separetor5
-       anchors.top: parent.top
-       anchors.topMargin: 0
-       anchors.left: txtColumnLabel5.left
-       anchors.leftMargin: -10
-       width: 1
-       height: 240
+       height: 140
        source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
    }
 
@@ -560,6 +441,16 @@ Rectangle {
    Image {
        id: bottomSeparator5
        anchors.bottom: txtRowLabel5.bottom
+       anchors.left: parent.left
+       anchors.leftMargin: 0
+       width: parent.width
+       height: 1
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
+   }
+
+   Image {
+       id: bottomSeparator6
+       anchors.bottom: txtRowLabel6.bottom
        anchors.left: parent.left
        anchors.leftMargin: 0
        width: parent.width

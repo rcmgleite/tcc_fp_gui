@@ -47,7 +47,7 @@ public:
     */
     Q_INVOKABLE void showImage(QString path);
 
-    Q_INVOKABLE void execute();
+    Q_INVOKABLE void execute(QString imagePath);
     //SCREENS
     Q_INVOKABLE void metricsScreenRequest();
     Q_INVOKABLE void algorithmScreenRequest();
@@ -128,6 +128,12 @@ public:
     Q_INVOKABLE QString getTrr31(void);
     Q_INVOKABLE QString getTrr32(void);
     Q_INVOKABLE QString getTrr33(void);
+
+    Q_INVOKABLE int getMinimumScore1(void);
+    Q_INVOKABLE int getMinimumScore2(void);
+    Q_INVOKABLE int getMinimumScore31(void);
+    Q_INVOKABLE int getMinimumScore32(void);
+    Q_INVOKABLE int getMinimumScore33(void);
 
 signals:
     void executionComplete();

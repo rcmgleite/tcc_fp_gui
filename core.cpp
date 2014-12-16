@@ -10,8 +10,9 @@ void Core::showImage(QString path){
 //    cout << "imagePath: " << path.toStdString() << endl;
 }
 
-void Core::execute(){
-    this->main.execute(this, "/home/priscila/tcc_fp_gui/resources/images/fingerprints/original.tif");
+void Core::execute(QString imagePath){
+//    this->main.execute(this, "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/fingerprints/original.tif");
+    this->main.execute(this, "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/"+imagePath.toStdString());
     this->callback();
 }
 
@@ -286,4 +287,24 @@ QString Core::getTrr33(void){
 
 void Core::callback(void){
     emit executionComplete();
+}
+
+int Core::getMinimumScore1(void){
+    return this->main.getVInterfaceDTO().getMinimumScore1();
+}
+
+int Core::getMinimumScore2(void){
+    return this->main.getVInterfaceDTO().getMinimumScore2();
+}
+
+int Core::getMinimumScore31(void){
+    return this->main.getVInterfaceDTO().getMinimumScore31();
+}
+
+int Core::getMinimumScore32(void){
+    return this->main.getVInterfaceDTO().getMinimumScore32();
+}
+
+int Core::getMinimumScore33(void){
+    return this->main.getVInterfaceDTO().getMinimumScore33();
 }

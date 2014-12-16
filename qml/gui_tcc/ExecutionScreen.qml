@@ -7,7 +7,7 @@ Rectangle {
     height: 125
     color: "transparent"
 
-    property string imgPath: '/home/priscila/tcc_fp_gui/resources/images/' + inputImagePath.text
+    property string imgPath: '/home/fernanda/workspace/c/tcc_fp_gui/resources/images/' + inputImagePath.text
 
     Rectangle{
         color: "transparent"
@@ -70,8 +70,11 @@ Rectangle {
             onButtonClick: {
                 //TODO
                 console.log('> executeButton clicked')
+//                core.setHasExecuted(false)
                 core.setHasExecuted(true)
-                core.execute()
+                core.execute(inputImagePath.text)
+                core.setHasExecuted(false)
+//                core.setHasExecuted(true)
 //                core.execute()
             }
         }
@@ -83,7 +86,7 @@ Rectangle {
             anchors.leftMargin: 10
             width: 1050
             height: 1
-            source: "/home/priscila/tcc_fp_gui/resources/images/list_separator.png"
+            source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
         }
     }
 
@@ -114,7 +117,7 @@ Rectangle {
 //        wrapMode: TextEdit.Wrap
 //        color: "black"
 //        focus: true
-//        text: "/home/priscila/tcc_fp_gui/resources/images/no_image.png"
+//        text: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/no_image.png"
 //    }
 
 //    Image {

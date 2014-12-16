@@ -12,12 +12,14 @@ Rectangle {
    property string rowLabel3: "Tempo total"
    property string rowLabel4: "Nº Minúcias"
    property string rowLabel5: "Qualidade min"
+   property string rowLabel6: "Nota de corte"
 
    property string val1x1: ""
    property string val2x1: ""
    property string val3x1: ""
    property string val4x1: ""
    property string val5x1: ""
+   property string val6x1: ""
 
 
 
@@ -83,6 +85,18 @@ Rectangle {
        width: cellWidth
    }
 
+
+   Text {
+       id: txtRowLabel6
+       font.pointSize: 10
+       font.family: "OpenSans"
+       text: qsTr(rowLabel6)
+       anchors.top: txtRowLabel5.bottom
+       anchors.left: parent.left
+       height: cellHeight
+       width: cellWidth
+   }
+
    //VALUES
 
    Text {
@@ -140,6 +154,18 @@ Rectangle {
        anchors.top: txtVal41.bottom
    }
 
+
+   Text {
+       id: txtVal61
+       font.pointSize: 10
+       font.family: "OpenSans"
+       text: qsTr(val6x1)
+       height: cellHeight
+       width: cellWidth
+       anchors.left: txtRowLabel6.right
+       anchors.top: txtVal51.bottom
+   }
+
    //VERTICAL separators
 
    Image {
@@ -149,7 +175,8 @@ Rectangle {
        anchors.left: parent.left
        anchors.leftMargin: parent.width/3
        width: 1
-       height: 100
+       height: 120
+       //height: 100
        source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_vertical_limit.png"
    }
 
@@ -208,6 +235,17 @@ Rectangle {
    Image {
        id: bottomSeparator5
        anchors.bottom: txtRowLabel5.bottom
+       anchors.left: parent.left
+       anchors.leftMargin: 0
+       width: parent.width
+       height: 1
+       source: "/home/fernanda/workspace/c/tcc_fp_gui/resources/images/list_separator.png"
+   }
+
+
+   Image {
+       id: bottomSeparator6
+       anchors.bottom: txtRowLabel6.bottom
        anchors.left: parent.left
        anchors.leftMargin: 0
        width: parent.width
